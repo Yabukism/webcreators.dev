@@ -1,0 +1,58 @@
+/* Flex Slider */
+.flexslider.alterna-fl {
+    overflow:hidden;
+    border:none;
+    .border-radius(0);
+    .box-shadow-none();
+    margin-bottom:0px;
+    .flex-control-nav {
+        bottom:5px;
+    }
+    .flex-direction-nav {
+        a {
+            opacity:1;
+            height:50px;
+            margin:-25px 0px 0px;
+            background-color:#000000;
+            background-size:30px 30px;
+            background-position:center !important;
+            background-repeat:no-repeat;
+        }
+        a:hover {
+            background-color:@theme_color;
+        }
+    }
+    .flex-prev {
+        background-image:url('@{url}/custom/icon_chevron_left.png');
+    }
+    .flex-next {
+        background-image:url('@{url}/custom/icon_chevron_right.png');
+    }
+}
+.flexslider.alterna-fl:hover {
+    .flex-prev {
+        left:0px;
+        border-radius:0 4px 4px 0;
+    }
+    .flex-next {
+        right:0px;
+        border-radius:4px 0 0 4px;
+    }
+}
+.flexslider.alterna-fl.touch {
+    .flex-prev {
+        left:0px !important;
+    }
+    .flex-next {
+        right:0px !important;
+    }
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio:1.5),only screen and (-moz-min-device-pixel-ratio:1.5),only screen and (-o-min-device-pixel-ratio:3/2),only screen and (min-device-pixel-ratio:1.5) {
+.flexslider.alterna-fl .flex-prev {
+	background-image:url('@{url}/custom/icon_chevron_left@2x.png');
+}
+.flexslider.alterna-fl .flex-next {
+	background-image:url('@{url}/custom/icon_chevron_right@2x.png');
+}
+}

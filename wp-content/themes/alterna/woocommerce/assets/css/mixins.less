@@ -1,0 +1,48 @@
+// mixins.less
+.transition (@delay: 600ms){	
+	-webkit-transition:@delay;
+	-moz-transition:@delay;
+	-o-transition:@delay;
+	transition:@delay;
+}
+
+.transform (@transform){	
+	 transform: @transform;
+    -ms-transform: @transform;
+    -webkit-transform: @transform;
+    -o-transform: @transform;
+    -moz-transform: @transform;
+}
+
+.border-radius (@radius) {
+	border-radius: @radius;
+	-moz-border-radius: @radius;
+	-webkit-border-radius: @radius;
+}
+
+.box-shadow (@params) {
+	box-shadow: @params;
+	-moz-box-shadow: @params;
+	-webkit-box-shadow: @params;
+}
+
+.box-shadow-arguments (@x: 0, @y: 0, @blur: 1px, @color: #000) {
+	box-shadow: @arguments;
+	-moz-box-shadow: @arguments;
+	-webkit-box-shadow: @arguments;
+}
+
+.box-shadow-none (){
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.links(@color, @hover-color){
+    a {
+        color: @color;
+        &:hover {
+            color: @hover-color;
+        }
+    }
+}

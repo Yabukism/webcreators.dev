@@ -1,0 +1,26 @@
+/* Header Banner */
+#header-banner {
+    display:none;
+    min-height:44px;
+    background:@header_banner_background_color;
+    color:@header_banner_color;
+	
+    .header-banner-content {
+        text-align:center;
+        padding:15px 25px;
+        position:relative;
+		.links(@header_banner_links_color, @header_banner_links_color_hover);
+    }
+	
+    .close-btn {
+        position:absolute;
+        top:50%;
+        margin-top:-10px;
+        right:0px;
+        font-size:12px;
+        width:20px;
+        height:20px;
+        line-height:20px;
+        background:#f6f6f6;
+    }
+}

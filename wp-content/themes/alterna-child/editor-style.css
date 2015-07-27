@@ -1,0 +1,8 @@
+.editor-area h3,
+.editor-area h4 {
+  clear: both;
+}
+.editor-area .alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}

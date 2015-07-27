@@ -1,0 +1,230 @@
+#theme-save-success {
+    display: none;
+    color: green;
+}
+div.timeline-container {
+    margin-right: 20px;
+    min-width: 1200px;
+}
+div.timeline-list-title {
+    padding: 10px 20px;
+    background-color: #E7E7E7;
+    color: #666666;
+    text-shadow: 0px 1px 1px #FFFFFF;
+}
+div.timeline-list {
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
+table.timeline-list {
+    width: 100%;
+}
+table.timeline-list td {
+    white-space: nowrap;
+}
+table.timeline-list td.input {
+    position: relative;
+    padding-right: 40px;
+    text-align: right;
+}
+table.timeline-list th {
+    text-align: left;
+    vertical-align: top;
+    font-weight: bold;
+    border-bottom: 1px solid #EEEEEE;
+}
+table.timeline-list tbody tr td {
+    border-bottom: 1px solid #EEEEEE;
+}
+table.timeline-list tbody tr.open td {
+    border-bottom: none;
+}
+table.timeline-list tbody tr.open {
+    background-color: #F9F9F9;
+}
+table.timeline-list tr.configure {
+    background-color: #F9F9F9;
+    display: none;
+}
+table.timeline-list input[type="number"],
+table.timeline-list select {
+    width: 100%;
+}
+table.timeline-list tr.configure select {
+    width: auto;
+}
+table.timeline-list tr.configure input[type="text"],
+table.timeline-list tr.configure textarea {
+    width: 100%;
+}
+table.timeline-list tr.configure textarea {
+    height: 100px;
+}
+
+div.timeline-list .configure-toggle {
+    position: absolute;
+    right: 20px;
+    top: 24px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-top-color: #BBBBBB;
+    cursor: pointer;
+}
+div.timeline-list .configure-toggle:hover,
+div.timeline-list .open .configure-toggle {
+    border-top-color: #777777;
+}
+div.timeline-list .get-code {
+    position: relative;
+    text-align: center;
+}
+div.timeline-list div.shortcode {
+    display: none;
+    z-index: 10;
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    padding: 20px;
+    border-radius: 3px;
+    color: #FFFFFF;
+    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: text;
+    text-shadow: none;
+    -webkit-animation: fadeDown 0.1s;
+       -moz-animation: fadeDown 0.1s;
+        -ms-animation: fadeDown 0.1s;
+         -o-animation: fadeDown 0.1s;
+            animation: fadeDown 0.1s;
+}
+div.timeline-list div.shortcode:before {
+    content: '';
+    position: absolute;
+    right: 30px;
+    bottom: 100%;
+    border: 8px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.8);
+}
+
+div.timeline-config {
+    position: relative;
+    padding: 20px;
+    border: 1px solid #CCCCCC;
+    border-radius: 2px;
+    background-color: #F4F4F4;
+    white-space: normal;
+}
+div.timeline-config:before,
+div.timeline-config:after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    right: 6px;
+    border: 10px solid transparent;
+}
+div.timeline-config:before {
+    border-bottom-color: #CCCCCC;
+    margin-bottom: 1px;
+}
+div.timeline-config:after {
+    border-bottom-color: #F4F4F4;
+}
+div.timeline-config-form {
+    display: none;
+    margin: 10px 0px 0px 0px;
+}
+div.timeline-config-form-custom-options {
+    display: none;
+}
+div.timeline-config-form-custom-options > div {
+    margin-top: 5px;
+}
+div.timelint-elements {
+    overflow: hidden;
+}
+button.timeline-element-label-add {
+    float: left;
+    margin: 0px 5px 5px 0px !important;
+}
+div.timeline-element-label {
+    float: left;
+    position: relative;
+    height: 27px;
+    line-height: 27px;
+    margin: 0px 5px 5px 0px;
+    padding: 0px 25px 0px 12px;
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    cursor: pointer;
+    border-radius: 3px;
+    max-width: 180px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+div.timeline-element-label.open,
+div.timeline-element-label:hover {
+    border-color: #0074A2;
+}
+div.timeline-element-label span {
+    position: absolute;
+    height: 18px;
+    line-height: 18px;
+    width: 18px;
+    top: 4px;
+    right: 4px;
+    text-align: center;
+    font-family: Arial;
+    border-radius: 2px;
+}
+div.timeline-element-label span:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/* Animation */
+@-webkit-keyframes scale {
+    from {-webkit-transform: scale(0);}
+    to {-webkit-transform: scale(1);}
+}
+@-moz-keyframes scale {
+    from {-moz-transform: scale(0);}
+    to {-moz-transform: scale(1);}
+}
+@-ms-keyframes scale {
+    from {-ms-transform: scale(0);}
+    to {-ms-transform: scale(1);}
+}
+@-o-keyframes scale {
+    from {-o-transform: scale(0);}
+    to {-o-transform: scale(1);}
+}
+@keyframes scale {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+
+
+@-webkit-keyframes fadeDown {
+    from {opacity: 0; -webkit-transform: translateY(-20px);}
+    to {opacity: 1; -webkit-transform: translateY(0px)}
+}
+@-moz-keyframes fadeDown {
+    from {opacity: 0; -moz-transform: translateY(-20px);}
+    to {opacity: 1; -moz-transform: translateY(0px)}
+}
+@-ms-keyframes fadeDown {
+    from {opacity: 0; -ms-transform: translateY(-20px);}
+    to {opacity: 1; -ms-transform: translateY(0px)}
+}
+@-o-keyframes fadeDown {
+    from {opacity: 0; -o-transform: translateY(-20px);}
+    to {opacity: 1; -o-transform: translateY(0px)}
+}
+@keyframes fadeDown {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0px)}
+}

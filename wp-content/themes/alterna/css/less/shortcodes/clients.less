@@ -1,0 +1,53 @@
+/* Clients */
+.clients {
+    position:relative;
+    overflow:hidden;
+    margin:20px 0 !important;
+    .clients-elements {
+        display:inline-block;
+        width:100%;
+    }
+    .client-element {
+        text-align:center;
+        display:inline-block;
+        width:100%;
+        .client-content {
+            opacity:0.6;
+            .transition(600ms);
+        }
+    }
+    .client-element:hover {
+        .client-content {
+            opacity:1;
+        }
+    }
+}
+.client-arrow-left,.client-arrow-right {
+    position:absolute;
+    display:none;
+    z-index:10;
+    color:#ffffff;
+    top:50%;
+    width:30px;
+    height:30px;
+    text-align:center;
+    background:#242424;
+    border-radius:4px;
+    padding:5px;
+    margin-top:-15px;
+    cursor:pointer;
+    opacity:0.5;
+    .transition(600ms);
+}
+.client-arrow-left:hover,.client-arrow-right:hover {
+    opacity:1;
+}
+.client-arrow-left i,.client-arrow-right i {
+    margin:0;
+}
+.client-arrow-left {
+    left:0;
+}
+.client-arrow-right {
+    right:0;
+}

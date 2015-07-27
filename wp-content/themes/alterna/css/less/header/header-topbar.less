@@ -1,0 +1,281 @@
+/* Header Topbar */
+#header-topbar {
+	min-height:30px;
+	line-height:30px;
+    background:@header_topbar_background_color;
+	color:@header_topbar_links_color;
+	span, a {
+		font-size: 12px;
+		color:@header_topbar_links_color;
+		i {
+			font-size: 14px;
+			margin-right:5px;
+		}
+	}
+	
+	a:hover, a:hover .amount {
+		color:@header_topbar_links_color_hover;
+	}
+	
+	ul {
+        list-style:none;
+        margin:0;
+		 li {
+            ul {
+                display:none;
+                background:@header_topbar_background_color;
+                border:1px solid @header_topbar_border_color;
+                position:absolute;
+                top:100%;
+                left:-1px;
+                min-width:100px;
+                z-index:999;
+                li {
+                    position:relative;
+					float: left;
+					span, a {
+						padding:0 10px;
+						float: left;
+						width: 110px;
+						border-bottom: 1px @header_topbar_border_color solid;
+					}
+					
+					a:hover {
+						 background:@header_topbar_sub_menu_background_color;
+					}
+					
+					&:last-child {
+						span, a {
+							border-bottom: none;
+						}
+					}
+                }
+			}
+		}
+		& > li:hover > ul {
+			display:block;
+		}
+	}
+	
+	.topbar-element {
+		& > ul > li {
+			float:left;
+			padding:0 8px;
+			position:relative;
+			border-right: 1px @header_topbar_border_color solid;
+			&.social {
+				padding:0;
+			}
+		}
+		&:last-child {
+			> ul > li:last-child {
+				padding-right:0;
+				border-right: none;
+			}
+		}
+	}
+	
+	.topbar-socials {
+		a {
+            width:30px;
+            height:30px;
+            display:block;
+            text-align:center;
+			i {
+				margin-right:0;
+			}
+        }
+		
+		.social:hover {
+			.fa-twitter {
+				color:#48c4d2 !important;
+			}
+			
+			.fa-facebook {
+				color:#3b5998 !important;
+			}
+			
+			.fa-google-plus {
+				color:#d94a39 !important;
+			}
+			
+			.fa-dribbble {
+				color:#ef5b92 !important;
+			}
+			
+			.fa-pinterest {
+				color:#cb2027 !important;
+			}
+			
+			.fa-flickr {
+				color:#f1628b !important;
+			}
+			
+			.fa-skype {
+				color:#18b7f1 !important;
+			}
+			
+			.fa-youtube {
+				color:#f45750 !important;
+			}
+			
+			.fa-vimeo-square {
+				color:#62a0ad !important;
+			}
+			
+			.fa-linkedin {
+				color:#71b2d0 !important;
+			}
+			
+			.fa-digg {
+				color:#2882c6 !important;
+			}
+			
+			.fa-deviantart {
+				color:#d0de21 !important;
+			}
+			
+			.fa-behance {
+				color:#18a3fe !important;
+			}
+			
+			.fa-xing {
+				color:#006567 !important;
+			}
+			
+			.fa-rss {
+				color:#ff6c00 !important;
+			}
+			
+			.fa-instagram {
+				color:#517fa4 !important;
+			}
+			
+			.fa-stumbleupon {
+				color:#eb4924 !important;
+			}
+			
+			.fa-envelope {
+				color:#4fbaf8 !important;
+			}
+			
+			.fa-lastfm {
+				color:#e31b23 !important;
+			}
+			
+			.fa-github-square {
+				color:#4183c4 !important;
+			}
+			
+			.fa-soundcloud {
+				color:#F76700 !important;
+			}
+			
+			.fa-vine {
+				color:#da5900 !important;
+			}
+			
+			.fa-whatsapp {
+				color:#81f54a !important;
+			}
+			
+			.fa-yelp {
+				color:#af0606 !important;
+			}
+			
+			.fa-codepen {
+				color:#3a3a3a !important;
+			}
+		}
+	}
+	
+	.topbar-wmpl {
+        li {
+            img {
+                margin-right:5px;
+            }
+        }
+    }
+	
+	.custom-content {
+		p {
+			margin:0;
+		}
+	}
+
+	#header-topbar-left-content {
+		float:left;
+		.topbar-element {
+			float:left;
+		}
+		ul {
+			ul {
+				right: auto;
+				left: -1px;
+				ul {
+					right:auto;
+					left:100%;
+					top:-1px;
+				}
+			}
+		}
+	}
+	
+	#header-topbar-right-content {
+		float:right;
+		.topbar-element {
+			float:left;
+		}
+		ul {
+			ul {
+				span, a {
+					float:left;
+				}
+				right: -1px;
+				left: auto;
+				ul {
+					left:auto;
+					right:100%;
+					top:-1px;
+				}
+			}
+		}
+	}
+
+}
+
+@media (max-width: 767px) { 
+#header-topbar {
+	#header-topbar-left-content,
+	#header-topbar-right-content {
+		width:100%;
+		text-align:center;	
+		.topbar-element {
+			width: 100%;
+			height: 30px;
+			padding: 0;
+			border-right: none;
+			& > ul {
+				display: inline-block;
+				& > li {
+					border-right: none;
+				}
+			}
+		}
+		ul {
+			ul {
+				span, a {
+					float:left;
+				}
+				left: -1px;
+				right: auto;
+				ul {
+					left:-1px;
+					right:auto;
+					top:100%;
+				}
+			}
+		}
+	}
+}
+}

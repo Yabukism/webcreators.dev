@@ -1,0 +1,78 @@
+/* Search Form */
+.sidebar-searchform {
+    float:left;
+    position:relative;
+    width:100%;
+    margin:0px;
+	& > div {
+		padding:0 37px 0 0;
+	}
+}
+
+.sidebar-searchform input[type=text] {
+    width:100%;
+    padding:8px 8px;
+    line-height: 20px;
+    margin:0px;
+}
+
+.sidebar-searchform input[type=submit] {
+    top:0px;
+    right:0px;
+    padding:0;
+    position:absolute;
+    width:38px;
+    height:38px;
+    border:none;
+    outline:0 !important;
+    background-color:@theme_color;
+    background-image:url('@{url}/search_icon.png');
+    background-size:26px 26px;
+    background-position:center;
+    background-repeat:no-repeat;
+    -webkit-transition:background-color 500ms;
+    -moz-transition:background-color 500ms;
+    -o-transition:background-color 500ms;
+    transition:background-color 500ms;
+}
+
+.widget_product_search form {
+	padding: 0 37px 0 0;
+	position: relative;
+}
+
+.widget_product_search .screen-reader-text {
+	display: none;
+}
+
+.widget_product_search input[type="search"]{
+	width: 100%;
+	height: 38px;
+}
+
+.widget_product_search input[type="submit"]{
+	top: 0px;
+	right: 0px;
+	padding: 0;
+	position: absolute;
+	width: 38px;
+	height: 38px;
+	border: none;
+	background-color: @theme_color;
+	background-size: 26px 26px;
+	background-position: center;
+	background-repeat: no-repeat;
+	text-indent: 10000px;
+	background-image:url('@{url}/search_icon.png');
+}
+.sidebar-searchform input[type=submit]:hover,
+.widget_product_search input[type="submit"]:hover {
+    background-color:#1a1a1a;
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio:1.5),only screen and (-moz-min-device-pixel-ratio:1.5),only screen and (-o-min-device-pixel-ratio:3/2),only screen and (min-device-pixel-ratio:1.5) {
+.sidebar-searchform input[type=submit],
+.widget_product_search input[type="submit"] {
+	background-image:url('@{url}/search_icon@2x.png');
+}
+}

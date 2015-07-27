@@ -1,0 +1,42 @@
+/* Wide Background */
+.wide-background {
+    background:#f5f5f5;
+}
+.wide-layout {
+    .wide-background {
+        padding:40px 130px;
+        margin-left:-130px;
+        margin-right:-130px;
+    }
+}
+.boxed-layout {
+    .wide-background {
+        padding:30px 15px;
+        margin-left:-15px;
+        margin-right:-15px;
+    }
+}
+
+@media (min-width: 2561px) and (max-width: 2880px) {
+.wide-layout .wide-background {padding-left:880px;padding-right:880px;margin-left:-880px;margin-right:-880px;}
+}
+
+@media (min-width: 1921px) and (max-width: 2560px) {
+.wide-layout .wide-background {padding-left:720px;padding-right:720px;margin-left:-720px;margin-right:-720px;}
+}
+
+@media (min-width: 1681px) and (max-width: 1920px) {
+.wide-layout .wide-background {padding-left:410px;padding-right:410px;margin-left:-410px;margin-right:-410px;}
+}
+
+@media (min-width: 1441px) and (max-width: 1680px) {
+.wide-layout .wide-background {padding-left:280px;padding-right:280px;margin-left:-280px;margin-right:-280px;}
+}
+
+@media (min-width: 1367px) and (max-width: 1440px) {
+.wide-layout .wide-background {padding-left:160px;padding-right:160px;margin-left:-160px;margin-right:-160px;}
+}
+
+@media (max-width: 767px) { 
+.wide-layout .wide-background {padding-left:15px;padding-right:15px;margin-left:-15px;margin-right: -15px;}
+}

@@ -1,0 +1,61 @@
+/* Side Tabs */
+.sidetabs {
+    float:left;
+    width:100%;
+    margin-bottom:10px;
+    .sidetabs-nav {
+        float:left;
+        width:200px;
+        li {
+            border:1px solid #e3e3e3;
+            padding:8px 15px;
+            cursor:pointer;
+            color:#777;
+            margin:0 0 -1px;
+            i {
+                margin-right:5px;
+            }
+        }
+        li.current {
+            cursor:auto;
+            color:#444;
+        }
+    }
+}
+.sidetabs.right {
+    .sidetabs-nav {
+        float:right;
+        li {
+            border-right:none;
+        }
+        li.current {
+            border-left:1px solid @theme_color;
+        }
+    }
+    .sidetabs-container {
+        margin-right:220px;
+    }
+}
+.sidetabs.left {
+    .sidetabs-nav {
+        li {
+            border-left:none;
+        }
+        li.current {
+            border-right:1px solid @theme_color;
+        }
+    }
+    .sidetabs-container {
+        margin-left:220px;
+    }
+}
+
+@media (max-width: 767px) { 
+.sidetabs.left .sidetabs-nav,.sidetabs.right .sidetabs-nav {
+    float:left;
+}
+.sidetabs.left .sidetabs-container,.sidetabs.right .sidetabs-container {
+    margin: 10px 0 0;
+    float: left;
+}
+}

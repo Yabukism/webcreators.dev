@@ -1,0 +1,554 @@
+/* Button */
+.btn,a.btn {
+    position:relative;
+    .border-radius( 4px);
+    text-shadow:none;
+    .box-shadow-none();
+    background-image:none;
+    outline:0 !important;
+    border:none;
+	padding: 10px 22px;
+    margin:0 0 15px;
+    color:rgba(255,255,255,0.9) !important;
+	.transition(background linear 300ms);
+
+    &:focus {
+        color:rgba(255,255,255,1) !important;
+    }
+    
+    &.no-margin {
+        margin:0;
+    }
+    
+    i {
+        margin-right:10px;
+    }
+	
+    &.btn-xs {
+		padding: 3px 10px;
+		i {
+			margin-right:4px;
+		}
+    }
+    
+    &.btn-sm {
+	    padding: 5px 12px;
+        i {
+            margin-right:5px;
+        }
+    }
+    
+    &.btn-lg {
+		padding: 16px 32px;
+        i {
+            margin-right:15px;
+        }
+    }
+    
+    &.float-btn {
+        padding-left:22px;
+        padding-right:22px;
+    }
+    
+    &.btn-lg.float-btn {
+        padding-left:30px;
+        padding-right:30px;
+    }
+    
+    &.btn-sm.float-btn {
+        padding-left:16px;
+        padding-right:16px;
+    }
+    
+    &.btn-xs.float-btn {
+        padding-left:13px;
+        padding-right:13px;
+    }
+    
+    &.icon-btn {
+        overflow:hidden;
+        padding-left:62px;
+    	padding-right:22px;
+        span {
+            position:absolute;
+            left:0;
+            top:0;
+            background:rgba(0,0,0,0.2);
+            padding:10px 16px;
+        }
+    }
+    
+    &.icon-btn:hover {
+        span {
+            background:rgba(0,0,0,0.3);
+        }
+    }
+    
+    &.icon-btn i,
+    &.icon-btn.btn-lg i {
+        margin:0;
+    }
+    
+    &.btn-lg.icon-btn {
+        padding-left: 88px;
+		padding-right: 32px;
+        span {
+            padding:16px 20px;
+        }
+    }
+    
+    &.btn-sm.icon-btn {
+        padding-left: 40px;
+		padding-right: 12px;
+		span {
+			padding:5px 10px;
+		}
+    }
+    
+    &.btn-xs.icon-btn {
+        padding-left: 34px;
+		padding-right: 10px;
+		span {
+			padding: 3px 8px;
+		}
+    }
+    
+    &.float-btn:active {
+        margin:1px 0 14px;
+        box-shadow:0 3px 0 #414141;
+    }
+    
+    &.float-btn.no-margin {
+        margin-bottom:4px;
+    }
+    
+    &.float-btn.no-margin:active {
+        margin:1px 0 3px;
+    }
+    
+    &.float-btn.icon-btn:hover {
+        span {
+            background:rgba(0,0,0,0.2);
+        }
+    }
+	&.border-btn {
+		border: 2px solid #ffffff;
+		background: transparent;
+		color: #ffffff !important;
+		&.black {
+			border: 2px solid #000000;
+			color: #000000 !important;
+		}
+		&.btn-theme {
+			border: 2px solid @theme_color;
+			color: @theme_color !important;
+		}
+		&.darkcyan {
+			border: 2px solid #008B8B;
+			color: #008B8B !important;
+		}
+		&.deepskyblue {
+			border: 2px solid #00BFFF;
+			color: #00BFFF !important;
+		}
+		&.royalblue {
+			border: 2px solid #4169E1;
+			color: #4169E1 !important;
+		}
+		&.blueviolet {
+			border: 2px solid #8A2BE2;
+			color: #8A2BE2 !important;
+		}
+		&.purple {
+			border: 2px solid #800080;
+			color: #800080 !important;
+		}
+		&.deeppink {
+			border: 2px solid #FF1493;
+			color: #FF1493 !important;
+		}
+		&.crimson {
+			border: 2px solid #DC143C;
+			color: #DC143C !important;
+		}
+		&.green {
+			border: 2px solid #008000;
+			color: #008000 !important;
+		}
+		&.lawngreen {
+			border: 2px solid #7CFC00;
+			color: #7CFC00 !important;
+		}
+		&.yellow {
+			border: 2px solid #f7ee17;
+			color: #f7ee17 !important;
+		}
+		&.gold {
+			border: 2px solid #FFD700;
+			color: #FFD700 !important;
+		}
+		&.orange {
+			border: 2px solid #FFA500;
+			color: #FFA500 !important;
+		}
+		&.orangered {
+			border: 2px solid #FF4500;
+			color: #FF4500 !important;
+		}
+		&.chocolate {
+			border: 2px solid #D2691E;
+			color: #D2691E !important;
+		}
+		&.red {
+			border: 2px solid #ff0000;
+			color: #ff0000 !important;
+		}
+	}
+}
+.btn:hover, a.btn:hover {
+    background-image:none;
+    color:rgba(255,255,255,1) !important;
+    text-shadow:none;
+    .transition(background linear 300ms);
+	
+	&.border-btn {
+		color: @gray_dark !important;
+		background:#ffffff;
+		&.white {
+			color: #000000 !important;
+		}
+		&.black {
+			color: #ffffff !important;
+			background:#000000;
+		}
+		&.btn-theme {
+			background:@theme_color;
+			color: #ffffff !important;
+		}
+		&.darkcyan {
+			background:#008B8B;
+			color: #ffffff !important;
+		}
+		&.deepskyblue {
+			background:#00BFFF;
+			color: #ffffff !important;
+		}
+		&.royalblue {
+			background:#4169E1;
+			color: #ffffff !important;
+		}
+		&.blueviolet {
+			background:#8A2BE2;
+			color: #ffffff !important;
+		}
+		&.purple {
+			background:#800080;
+			color: #ffffff !important;
+		}
+		&.deeppink {
+			background:#FF1493;
+			color: #ffffff !important;
+		}
+		&.crimson {
+			background:#DC143C;
+			color: #ffffff !important;
+		}
+		&.green {
+			background:#008000;
+			color: #ffffff !important;
+		}
+		&.lawngreen {
+			background:#7CFC00;
+			color: #ffffff !important;
+		}
+		&.yellow {
+			background:#f7ee17;
+			color: #ffffff !important;
+		}
+		&.gold {
+			background:#FFD700;
+			color: #ffffff !important;
+		}
+		&.orange {
+			background:#FFA500;
+			color: #ffffff !important;
+		}
+		&.orangered {
+			background:#FF4500;
+			color: #ffffff !important;
+		}
+		&.chocolate {
+			background:#D2691E;
+			color: #ffffff !important;
+		}
+		&.red {
+			background:#ff0000;
+			color: #ffffff !important;
+		}
+	}
+}
+.btn-theme-t {
+    color:@theme_color;
+}
+.btn-theme {
+    background:@theme_color;
+}
+.btn-theme:hover {
+    background:darken(@theme_color, 10%); 
+}
+.float-btn.btn-theme {
+    box-shadow:0 4px 0 darken(@theme_color, 15%);
+}
+.float-btn.btn-theme:active {
+    box-shadow:0 3px 0 darken(@theme_color, 15%);
+}
+.darkcyan-t {
+	color: #008B8B;
+}
+.darkcyan {
+    background:#008B8B;
+}
+.darkcyan:hover {
+    background:darken(#008B8B, 10%);
+}
+.float-btn.darkcyan {
+    box-shadow:0 4px 0 darken(#008B8B, 15%);
+}
+.float-btn.darkcyan:active {
+    box-shadow:0 3px 0 darken(#008B8B, 15%);
+}
+
+.deepskyblue-t {
+    color:#00BFFF;
+}
+.deepskyblue {
+    background:#00BFFF;
+}
+.deepskyblue:hover {
+    background:darken(#00BFFF, 10%);
+}
+.float-btn.deepskyblue {
+    box-shadow:0 4px 0 darken(#00BFFF, 15%);
+}
+.float-btn.deepskyblue:active {
+    box-shadow:0 3px 0 darken(#00BFFF, 15%);
+}
+
+.royalblue-t {
+    color:#4169E1;
+}
+.royalblue {
+    background:#4169E1;
+}
+.royalblue:hover {
+    background:darken(#4169E1, 10%);
+}
+.float-btn.royalblue {
+    box-shadow:0 4px 0 darken(#4169E1, 15%);
+}
+.float-btn.royalblue:active {
+    box-shadow:0 3px 0 darken(#4169E1, 15%);
+}
+
+.blueviolet-t {
+    color:#8A2BE2;
+}
+.blueviolet {
+    background:#8A2BE2;
+}
+.blueviolet:hover {
+    background:darken(#8A2BE2, 10%);
+}
+.float-btn.blueviolet {
+    box-shadow:0 4px 0 darken(#8A2BE2, 15%);
+}
+.float-btn.blueviolet:active {
+    box-shadow:0 3px 0 darken(#8A2BE2, 15%);
+}
+
+.purple-t {
+    color:#800080;
+}
+.purple {
+    background:#800080;
+}
+.purple:hover {
+    background: darken(#800080, 10%);
+}
+.float-btn.purple {
+    box-shadow:0 4px 0 darken(#800080, 15%);
+}
+.float-btn.purple:active {
+    box-shadow:0 3px 0 darken(#800080, 15%);
+}
+
+.deeppink-t {
+    color:#FF1493;
+}
+.deeppink {
+    background:#FF1493;
+}
+.deeppink:hover {
+    background:darken(#FF1493, 10%);
+}
+.float-btn.deeppink {
+    box-shadow:0 4px 0 darken(#FF1493, 15%);
+}
+.float-btn.deeppink:active {
+    box-shadow:0 3px 0 darken(#FF1493, 15%);
+}
+
+.crimson-t {
+    color:#DC143C;
+}
+.crimson {
+    background:#DC143C;
+}
+.crimson:hover {
+    background:darken(#DC143C, 10%);
+}
+.float-btn.crimson {
+    box-shadow:0 4px 0 darken(#DC143C, 15%);
+}
+.float-btn.crimson:active {
+    box-shadow:0 3px 0 darken(#DC143C, 15%);
+}
+
+.green-t {
+    color:#008000;
+}
+.green {
+    background:#008000;
+}
+.green:hover {
+    background:darken(#008000, 10%);
+}
+.float-btn.green {
+    box-shadow:0 4px 0 darken(#008000, 15%);
+}
+.float-btn.green:active {
+    box-shadow:0 3px 0 darken(#008000, 15%);
+}
+
+.lawngreen-t {
+    color:#7CFC00;
+}
+.lawngreen {
+    background:#7CFC00;
+}
+.lawngreen:hover {
+    background:darken(#7CFC00, 10%);
+}
+.float-btn.lawngreen {
+    box-shadow:0 4px 0 darken(#7CFC00, 15%);
+}
+.float-btn.lawngreen:active {
+    box-shadow:0 3px 0 darken(#7CFC00, 15%);
+}
+
+.yellow-t {
+    color:#f7ee17;
+}
+.yellow {
+    background:#f7ee17;
+}
+.yellow:hover {
+    background:darken(#f7ee17, 10%);
+}
+.float-btn.yellow {
+    box-shadow:0 4px 0 darken(#f7ee17, 15%);
+}
+.float-btn.yellow:active {
+    box-shadow:0 3px 0 darken(#f7ee17, 15%);
+}
+
+.gold-t {
+    color:#FFD700;
+}
+.gold {
+    background:#FFD700;
+}
+.gold:hover {
+    background:darken(#FFD700, 10%);
+}
+.float-btn.gold {
+    box-shadow:0 4px 0 darken(#FFD700, 15%);
+}
+.float-btn.gold:active {
+    box-shadow:0 3px 0 darken(#FFD700, 15%);
+}
+
+.orange-t {
+    color:#FFA500;
+}
+.orange {
+    background:#FFA500;
+}
+.orange:hover {
+    background:darken(#FFA500, 10%);
+}
+.float-btn.orange {
+    box-shadow:0 4px 0 darken(#FFA500, 15%);
+}
+.float-btn.orange:active {
+    box-shadow:0 3px 0 darken(#FFA500, 15%);
+}
+
+.orangered-t {
+    color:#FF4500;
+}
+.orangered {
+    background:#FF4500;
+}
+.orangered:hover {
+    background:darken(#FF4500, 10%);
+}
+.float-btn.orangered {
+    box-shadow:0 4px 0 darken(#FF4500, 15%);
+}
+.float-btn.orangered:active {
+    box-shadow:0 3px 0 darken(#FF4500, 15%);
+}
+
+.chocolate-t {
+    color:#D2691E;
+}
+.chocolate {
+    background:#D2691E;
+}
+.chocolate:hover {
+    background:darken(#D2691E, 10%);
+}
+.float-btn.chocolate {
+    box-shadow:0 4px 0 darken(#D2691E, 15%);
+}
+.float-btn.chocolate:active {
+    box-shadow:0 3px 0 darken(#D2691E, 15%);
+}
+
+.red-t {
+    color:#ff0000;
+}
+.red {
+    background:#ff0000;
+}
+.red:hover {
+    background:darken(#ff0000, 10%);
+}
+.float-btn.red {
+    box-shadow:0 4px 0 darken(#ff0000, 15%);
+}
+.float-btn.red:active {
+    box-shadow:0 3px 0 darken(#ff0000, 15%);
+}
+
+.alterna-button-align-center {
+	margin:0;
+	text-align:center;
+}
+
+.alterna-button-align-right {
+	margin:0;
+	text-align:right;
+}
+

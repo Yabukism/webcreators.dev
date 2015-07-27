@@ -1,0 +1,471 @@
+@charset "utf-8";
+/* CSS Document */
+/* General CSS: applies to all layouts */
+	table.wprpw_post_pro th {
+		text-align:left;
+	}
+	.hide_wrap{ display:none;}
+	.wp-posts-pro {
+		width : 100%;
+		overflow : hidden;
+		font-size: 0.9em;
+	}
+	.wp-posts-pro a {
+		text-decoration: none;
+		font-weight: bold;
+	}
+	.wp-posts-pro p a { font-weight: normal; }
+	.wp-posts-pro .a_box, .wp-posts-pro .comments {
+		overflow: hidden;
+		padding: 15px 0px;
+	}
+	.wp-posts-pro .caption { 
+		margin-top: 10px;
+		line-height: 1.375; /* 23/16 (rem values with pixel fallback */
+	}
+	/*body.wp-admin .wp-posts-pro .a_box > h2:first-child,
+	.wp-posts-pro .a_box .caption > h2:first-child {
+		font-size: 1em;
+		display: inline-block;
+		clear: both;
+	}*/
+	/*.wp-posts-pro .a_box > p+p, .wp-posts-pro .a_box > h2:first-child+p,
+	.wp-posts-pro .a_box  .caption .wpp_taxonomy p, .wp-posts-pro .a_box .caption > h2:first-child+p {
+		font-size: 1em;
+		color: #999;
+		margin: 3px 0 10px 0
+	}*/
+	.wp-posts-pro p.categories, .wp-posts-pro p.tags {
+		padding-top: 10px;
+		clear: both;
+		font-weight: bold;
+		color: #999;
+	}
+	.wp-posts-pro div.cat {
+		font-size: 0.9em; 
+		color:#999; 
+		margin: 5px 0; 
+	}
+	.wp-posts-pro p.categories a, .wp-posts-pro p.tags a { font-weight: bold; }
+	.wp-posts-pro a.read-more {
+		font-weight: normal;
+	}
+	.wp-posts-pro .image_holder {
+		float		: left;
+		margin		: 0 15px 0 0;
+	}
+	.wp-posts-pro .image_holder img {
+   /* max-width: 100px; height:auto !important;*/
+}
+	.wp-posts-pro .a_box.dotted { border-top-style: dotted; }
+	.wp-posts-pro .a_box.dashed { border-top-style: dashed; }
+	.wp-posts-pro .a_box.double { border-top-style: double; }
+	.wp-posts-pro .a_box.groove { border-top-style: groove; }
+	.wp-posts-pro .a_box.ridge { border-top-style: ridge; }
+	.wp-posts-pro .a_box.inset { border-top-style: inset; }
+	.wp-posts-pro .a_box.outset { border-top-style: outset; }
+	/*body.wp-admin .wp-posts-pro .a_box > h2:first-child {
+		margin: 0px;
+		padding: 0px;
+	}*/
+	/*body.wp-admin .wp-posts-pro .a_box  > p+p, body.wp-admin .wp-posts-pro .a_box > h2:first-child+p,
+	body.wp-admin .wp-posts-pro .a_box  .caption > p+p, body.wp-admin .wp-posts-pro .a_box .caption > h2:first-child+p {
+		margin: -7px 0 0;
+	}*/
+	
+.wpp_meta{ line-height:16px; margin:5px 0px;color: #999999;    font-size: 0.9em;}
+.wpp_category{line-height:16px; margin:5px 0px; color: #999999;    font-size: 0.9em;}
+.wpp_category a, .wpp_tags a{font-weight:normal;}
+.wpp_tags{line-height:16px; margin:5px 0px ; color: #999999;    font-size: 0.9em;}
+.wpp_readmore{line-height:24px;}
+.wpp_taxonomy{margin-top:5px;}
+.layout_preview h2{margin-top:0px; line-height:25px; padding-top:0px;}
+/* Layout 1 */
+	#layout_1 .wp-posts-pro .a_box { border-bottom: 1px solid #E6E6E6; }
+	
+	
+/* Layout 2 */
+	/*#layout_2 .wp-posts-pro .a_box .caption > h2:first-child{
+		margin-bottom: 10px;
+		width: 50%;
+	}
+	body.wp-admin #layout_2 .wp-posts-pro .a_box .caption > h2:first-child { 
+		min-width: 65%; 
+		margin-bottom: 0px;
+		padding-top: 0px;
+		margin-top: -7px;
+	}*/
+	
+
+/* Layout 3 */
+	#layout_3 .wp-posts-pro .a_box {
+		border-bottom	: 1px dotted #555;
+		line-height: 1.375;
+	}
+	#layout_3 .wp-posts-pro p.recent {
+		background	: #6682b5;
+		color		: #fff;
+		padding		: 0 2px;
+		font-weight	: bold;
+	}
+	/*#layout_3 .wp-posts-pro .a_box > h2:first-child{
+		margin-bottom: 10px;
+	}*/
+	#layout_3 .wp-posts-pro p.publish { 
+		font-size:0.9em; 
+		color: #999;
+		margin: 5px 0 0;
+	}
+	/*body.wp-admin #layout_3 .wp-posts-pro .a_box { line-height: 1; }	
+	body.wp-admin #layout_3 .wp-posts-pro .a_box > h2:first-child{ display: block; }
+	body.wp-admin #layout_3 .wp-posts-pro .a_box  > p+p, body.wp-admin #layout_3 .wp-posts-pro .a_box > h2:first-child+p {
+		margin: 10px 0;
+	}*/
+
+
+/* Layout 4 */
+	#layout_4 .wp-posts-pro .a_box {		
+		border-bottom: 1px solid #ccc;
+	}
+	#layout_4 .wp-posts-pro .image_holder {
+		float		: right;
+		margin		: 0 0 0 15px;
+		display		: inline;
+	}
+	#layout_4 .wp-posts-pro .caption { margin-top: 0px; }
+	/*#layout_4 .wp-posts-pro .a_box .caption > h2:first-child{
+		margin-bottom: 10px;
+		width: 58%;
+		display: inline;
+	}
+	body.wp-admin #layout_4 .wp-posts-pro .a_box .caption > h2:first-child{
+		margin:0px;
+		margin-top: -7px;
+		
+	}*/
+
+	
+/* Layout 5*/
+
+
+/* Layout 6 */
+	#layout_6 .wp-posts-pro .image_holder { width: 100%; }
+	#layout_6 .wp-posts-pro .image_holder img { 
+		max-width: 100%;
+		width: 100%;
+		margin-top: 5px;
+	}
+	body.wp-admin #layout_6 .wp-posts-pro .image_holder img { height: auto; }
+	#layout_6.wp-posts-pro .a_box  .comments > p {
+		font-size: 0.8em;
+		color: #999;
+		margin: 3px 0 10px 0
+	}
+	#layout_6 .wp-posts-pro p.publish { 
+		font-size:1em; 
+		color: #999;
+		margin: 5px 0 0;
+	}
+	#layout_6 .wp-posts-pro .comments {
+		padding: 0px 10px;
+		margin: 0 0 0 -10px;
+	}
+
+
+/* Layout 7 */
+	#layout_7 .wp-posts-pro .image_holder img { 
+		border-bottom: 3px solid #c90202; border-left:none;border-top:none;border-right:none; padding:0px; 
+	}
+	/*#layout_7 .wp-posts-pro .a_box .caption > h2:first-child {
+		width: 58%;
+		display: inline;
+	}*/
+	body.wp-admin #layout_7 h2 { margin-top: 0px; padding-top: 0px; }
+	
+#layout_1 h2,#layout_2 h2,#layout_3 h2,#layout_4 h2,#layout_5 h2,#layout_6 h2,#layout_7 h2{ margin-top:0px;  padding-top:0px;margin-bottom:0px;}
+.widget-area #layout_1 h2,.widget-area #layout_2 h2,.widget-area #layout_3 h2,.widget-area #layout_4 h2,.widget-area #layout_5 h2,
+.widget-area #layout_6 h2,.widget-area #layout_7 h2{ margin-top:0px;  padding-top:0px; margin-bottom:5px; line-height:17px; }
+
+ 
+
+#layout_1 h1,#layout_2 h1,#layout_3 h1,#layout_4 h1,#layout_5 h1,#layout_6 h1,#layout_7 h1,
+#layout_1 h2,#layout_2 h2,#layout_3 h2,#layout_4 h2,#layout_5 h2,#layout_6 h2,#layout_7 h2,
+#layout_1 h3,#layout_2 h3,#layout_3 h3,#layout_4 h3,#layout_5 h3,#layout_6 h3,#layout_7 h3,
+#layout_1 h4,#layout_2 h4,#layout_3 h4,#layout_4 h4,#layout_5 h4,#layout_6 h4,#layout_7 h4,
+#layout_1 h5,#layout_2 h5,#layout_3 h5,#layout_4 h5,#layout_5 h5,#layout_6 h5,#layout_7 h5,
+#layout_1 h6,#layout_2 h6,#layout_3 h6,#layout_4 h6,#layout_5 h6,#layout_6 h6,#layout_7 h6
+{ clear:none;}
+
+.wp-posts-pro .image_holder img{ border:1px solid #EAEAEA; padding:3px; margin-bottom:5px;}
+.wp-posts-pro .content{width:auto; padding:0px; float:none;}
+
+.widget-area .wp-posts-pro  .image_holder img{max-width:80px; height:auto !important;}
+
+.posts-pro-pagination {
+	clear: both;
+	padding: 20px 0;
+	font-size: 11px;
+	float: left;
+	width: 100%;
+}
+
+.posts-pro-pagination span, .posts-pro-pagination a {
+	float: left;
+	height: auto;
+	width: auto;
+	line-height: 35px;
+	text-align: center;
+	padding: 0 14px!important;
+	border-radius: 100px;
+	margin-right: 5px;
+	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.posts-pro-pagination a:hover{
+	color:#fff;
+	background: #3279BB;
+}
+
+.posts-pro-pagination .current{
+	padding: 0;
+	background: #3279BB;
+	color:#fff;
+}
+
+
+
+/*  SECTIONS  ============================================================================= */
+
+.wp-posts-pro .section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  GROUPING  ============================================================================= */
+
+
+.wp-posts-pro .group:before,
+.wp-posts-pro .group:after {
+    content:"";
+    display:table;
+}
+.wp-posts-pro .group:after {
+    clear:both;
+}
+.wp-posts-pro .group {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+/*  GRID COLUMN SETUP   ==================================================================== */
+
+.wp-posts-pro .col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.wp-posts-pro .col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+
+
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.wp-posts-pro .col { 
+		margin: 1% 0 1% 0%;
+	}
+}
+
+/*  GRID OF TWO   ============================================================================= */
+
+
+.span_2_of_2 {
+	width: 100%;
+}
+
+.span_1_of_2 {
+	width: 49.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span_2_of_2 {
+		width: 100%; 
+	}
+	.span_1_of_2 {
+		width: 100%; 
+	}
+}
+
+/*  GRID OF THREE   ============================================================================= */
+
+	
+.span_3_of_3 {
+	width: 100%; 
+}
+
+.span_2_of_3 {
+	width: 66.13%; 
+}
+
+.span_1_of_3 {
+	width: 32.26%; 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span_3_of_3 {
+		width: 100%; 
+	}
+	.span_2_of_3 {
+		width: 100%; 
+	}
+	.span_1_of_3 {
+		width: 100%;
+	}
+}
+
+
+/*  GRID OF FOUR   ============================================================================= */
+
+	
+.span_4_of_4 {
+	width: 100%; 
+}
+
+.span_3_of_4 {
+	width: 74.6%; 
+}
+
+.span_2_of_4 {
+	width: 49.2%; 
+}
+
+.span_1_of_4 {
+	width: 23.8%; 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span_4_of_4 {
+		width: 100%; 
+	}
+	.span_3_of_4 {
+		width: 100%; 
+	}
+	.span_2_of_4 {
+		width: 100%; 
+	}
+	.span_1_of_4 {
+		width: 100%; 
+	}
+}
+
+
+/*  GRID OF FIVE   ============================================================================= */
+
+	
+.span_5_of_5 {
+	width: 100%;
+}
+
+.span_4_of_5 {
+  	width: 79.68%; 
+}
+
+.span_3_of_5 {
+  	width: 59.36%; 
+}
+
+.span_2_of_5 {
+  	width: 39.04%;
+}
+
+.span_1_of_5 {
+  	width: 18.72%;
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span_5_of_5 {
+		width: 100%; 
+	}
+	.span_4_of_5 {
+		width: 100%; 
+	}
+	.span_3_of_5 {
+		width: 100%; 
+	}
+	.span_2_of_5 {
+		width: 100%; 
+	}
+	.span_1_of_5 {
+		width: 100%; 
+	}
+}
+
+/*  GRID OF SIX   ============================================================================= */
+
+
+.span_6_of_6 {
+	width: 100%;
+}
+
+.span_5_of_6 {
+  	width: 83.06%;
+}
+
+.span_4_of_6 {
+  	width: 66.13%;
+}
+
+.span_3_of_6 {
+  	width: 49.2%;
+}
+
+.span_2_of_6 {
+  	width: 32.26%;
+}
+
+.span_1_of_6 {
+  	width: 15.33%;
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span_6_of_6 {
+		width: 100%; 
+	}
+	.span_5_of_6 {
+		width: 100%; 
+	}
+	.span_4_of_6 {
+		width: 100%; 
+	}
+	.span_3_of_6 {
+		width: 100%; 
+	}
+	.span_2_of_6 {
+		width: 100%; 
+	}
+	.span_1_of_6 {
+		width: 100%; 
+	}
+}
+
+
+
+
+
+
+
+

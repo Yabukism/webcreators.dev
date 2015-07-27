@@ -1,0 +1,163 @@
+********************************************************************************
+DUPLICATOR INSTALL-LOG
+STEP1 START @ 08:25:09
+NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+VERSION:	0.5.22
+PHP:		5.4.19 | SAPI: apache2handler
+SERVER:		Apache/2.4.4 (Unix) PHP/5.4.19 OpenSSL/1.0.1e mod_perl/2.0.8-dev Perl/v5.16.3
+DOC ROOT:	/Users/Yabuki/Documents/Websites/webcreators.dev
+DOC ROOT 755:	true
+LOG FILE 644:	true
+BUILD NAME:	20150722_welcometothevccw_55afdda290a583397150722181458
+REQUEST URL:	http://webcreators.dev/installer.php
+
+********************************************************************************
+ARCHIVE SETUP
+********************************************************************************
+NAME:	20150722_welcometothevccw_55afdda290a583397150722181458_archive.zip
+SIZE:	88.3MB
+ZIP:	Enabled (ZipArchive Support)
+EXTRACTING
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 1669
+    [filename] => /Users/Yabuki/Documents/Websites/webcreators.dev/20150722_welcometothevccw_55afdda290a583397150722181458_archive.zip
+    [comment] => 
+)
+COMPLETE: true
+
+WEB SERVER CONFIGURATION FILE RESET:
+- Backup of .htaccess/web.config made to .orig
+- Reset of .htaccess/web.config files
+
+UPDATED FILES:
+- SQL FILE:  '/Users/Yabuki/Documents/Websites/webcreators.dev/installer-data.sql'
+- WP-CONFIG: '/Users/Yabuki/Documents/Websites/webcreators.dev/wp-config.php'
+
+ARCHIVE RUNTIME: 11.2254 sec.
+
+
+********************************************************************************
+DATABASE-ROUTINES
+********************************************************************************
+--------------------------------------
+SERVER ENVIROMENT
+--------------------------------------
+MYSQL VERSION:	5.1.44
+TIMEOUT:	5000
+MAXPACK:	10485760
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+ERRORS FOUND:	0
+DROP TABLE:	removed (20) tables
+QUERIES RAN:	3941
+
+wp_asa_collection: (0)
+wp_asa_collection_item: (0)
+wp_asa_log: (2)
+wp_blc_filters: (0)
+wp_blc_instances: (3)
+wp_blc_links: (2)
+wp_blc_synch: (9)
+wp_commentmeta: (0)
+wp_comments: (0)
+wp_create_map: (9)
+wp_duplicator_packages: (1)
+wp_ewwwio_images: (20)
+wp_group_map: (1)
+wp_links: (0)
+wp_map_locations: (10)
+wp_map_routes: (0)
+wp_options: (357)
+wp_post_widget_layouts: (2)
+wp_post_widget_rules: (0)
+wp_postmeta: (2828)
+wp_posts: (349)
+wp_term_relationships: (99)
+wp_term_taxonomy: (89)
+wp_terms: (89)
+wp_timeline: (1)
+wp_usermeta: (40)
+wp_users: (1)
+Removed '56' cache/transient rows
+
+SECTION RUNTIME: 8.3322 sec.
+
+********************************************************************************
+STEP1 COMPLETE @ 08:25:29 - TOTAL RUNTIME: 20.0606 sec.
+********************************************************************************
+
+
+
+********************************************************************************
+DUPLICATOR INSTALL-LOG
+STEP2 START @ 08:26:28
+NOTICE: Do not post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	latin1
+CHARSET CLIENT:	 utf8 
+
+--------------------------------------
+SERIALIZER ENGINE
+[*] scan every column
+[~] scan only text columns
+[^] no searchable columns
+--------------------------------------
+wp_asa_collection^ (0)
+wp_asa_collection_item^ (0)
+wp_asa_log~ (2)
+wp_blc_filters^ (0)
+wp_blc_instances~ (3)
+wp_blc_links~ (2)
+wp_blc_synch~ (9)
+wp_commentmeta^ (0)
+wp_comments^ (0)
+wp_create_map~ (9)
+wp_duplicator_packages^ (0)
+wp_ewwwio_images~ (20)
+wp_group_map~ (1)
+wp_links^ (0)
+wp_map_locations~ (10)
+wp_map_routes^ (0)
+wp_options~ (299)
+wp_post_widget_layouts~ (2)
+wp_post_widget_rules^ (0)
+wp_postmeta~ (2828)
+wp_posts~ (349)
+wp_term_relationships~ (99)
+wp_term_taxonomy~ (89)
+wp_terms~ (89)
+wp_timeline~ (1)
+wp_usermeta~ (40)
+wp_users~ (1)
+--------------------------------------
+SEARCH1:	'http://vccw.dev' 
+REPLACE1:	'http://webcreators.dev' 
+SEARCH2:	'/var/www/wordpress/' 
+REPLACE2:	'/Users/Yabuki/Documents/Websites/webcreators.dev/' 
+SCANNED:	Tables:27 | Rows:3853 | Cells:22573 
+UPDATED:	Tables:5 | Rows:406 |Cells:414 
+ERRORS:		0 
+RUNTIME:	2.847900 sec
+
+********************************************************************************
+START FINAL CLEANUP: 08:26:31
+********************************************************************************
+NEW WP-ADMIN USER: New username 'yabuki' was created successfully 
+ 
+UPDATE `wp_blogs` SET domain = 'webcreators.dev' WHERE domain = 'vccw.dev'
+
+--------------------------------------
+WARNINGS
+--------------------------------------
+WP-CONFIG WARNING: The wp-config.php has one or more of these values "WP_CONTENT_DIR, WP_CONTENT_URL, WPCACHEHOME, COOKIE_DOMAIN, WP_SITEURL, WP_HOME, WP_TEMP_DIR" which may cause issues please validate these values by opening the file.
+
+WEB SERVER CONFIGURATION FILE BASIC SETUP:
+created basic .htaccess file.  If using IIS web.config this process will need to be done manually.
+********************************************************************************
+STEP 2 COMPLETE @ 08:26:31 - TOTAL RUNTIME: 2.8990 sec.
+********************************************************************************

@@ -1,0 +1,35 @@
+/* Skills */
+.skills {
+    margin:0;
+    .skill-element {
+        height:28px;
+        position:relative;
+        background:#f2f2f2;
+        margin-bottom:10px;
+        border-radius:4px;
+        overflow:hidden;
+    }
+    .skill-bg {
+        border-radius:4px;
+        position:absolute;
+        width:0%;
+        height:100%;
+        .transition(500ms);
+    }
+    .skill-name {
+        position:absolute;
+        left:10px;
+        color:#ffffff;
+        line-height:28px;
+    }
+    .skill-progress {
+        position:absolute;
+        top:2px;
+        right:10px;
+        color:#ffffff;
+        line-height:20px;
+        background:rgba(0,0,0,0.3);
+        border-radius:4px;
+        padding:2px 5px;
+    }
+}

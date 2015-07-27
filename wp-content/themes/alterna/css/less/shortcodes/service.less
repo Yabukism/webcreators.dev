@@ -1,0 +1,138 @@
+/* Service */
+.alterna-service {
+    overflow:hidden;
+    margin-bottom:10px;
+	&.default_bg,
+	&.alterna-service.content_bg {
+		background:#f3f3f3;
+		border-radius:10px;
+	}
+	&.center {
+		text-align:center;
+		.alterna-service-img-content {
+			padding:30px 30px 15px;
+		}
+		.alterna-service-icon {
+		    a {
+				color:#ffffff !important;
+			    }
+			padding:15px;
+			height:100px;
+			width:100px;
+			font-size:60px;
+			line-height:70px;
+		}
+		.alterna-service-content {
+			padding:15px;
+		}
+		&.alterna-service-icon-no-bg {
+			.alterna-service-img-content {
+				padding:20px 20px 0px;
+			}
+			.alterna-service-icon {
+				padding:0;
+				height:50px;
+				width:50px;
+				font-size:40px;
+				line-height:50px;
+			}
+		}
+	}
+	&.left {
+		.alterna-service-img-content {
+			padding:15px;
+			width:80px;
+			float:left;
+		}
+		.alterna-service-icon {
+		    a {
+				color:#ffffff !important;
+			    }
+			padding:10px;
+			height:50px;
+			width:50px;
+			font-size:30px;
+			line-height:30px;
+		}
+		.alterna-service-content {
+			padding:15px;
+			margin-left:80px;
+		}
+		&.alterna-service-icon-no-bg {
+			.alterna-service-img-content {
+				padding:0;
+				width:50px;
+				float:left;
+			}
+			.alterna-service-icon {
+			    
+				padding:0;
+				height:30px;
+				width:30px;
+				font-size:30px;
+				line-height:30px;
+			}
+			.alterna-service-content {
+				padding:0;
+				margin-left:50px;
+			}
+		}
+		&.default_bg {
+			padding:10px;
+		}
+	}
+	&.alterna-service-icon-bg {
+		color:#ffffff;
+		.alterna-service-icon {
+		    a {
+			color:#ffffff !important;
+		    }
+			&.service-rotate-scale {
+				.transition(700ms);
+				.transform(rotate(0deg)  scale(0.8));
+			}
+			&.service-rotate {
+				.transition(700ms);
+				.transform(rotate(0deg));
+			}
+			&.service-scale {
+				.transition(700ms);
+				.transform(scale(0.8));
+			}
+		}
+	}
+	&.alterna-service-icon-bg:hover {
+		 .alterna-service-icon {
+			&.service-rotate-scale {
+				.transform(rotate(360deg)  scale(1.2));
+			}
+			&.service-rotate {
+				.transform(rotate(360deg));
+			}
+			&.service-scale {
+				.transform(scale(1.2));
+			}
+		}
+	}
+}
+.alterna-service-icon {
+    display:inline-block;
+    border-radius:70px;
+    text-align:center;
+}
+.alterna-service.content_bg {
+    .alterna-service-content {
+        background:#dfdfdf;
+    }
+}
+.alterna-service-title {
+    margin:0 0 10px;
+	color:#454545;
+}
+.alterna-service-entry-content {
+    margin-bottom:15px;
+	color:#454545;
+}
+.alterna-service-link {
+    cursor:pointer;
+}

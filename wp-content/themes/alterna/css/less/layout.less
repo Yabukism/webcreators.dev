@@ -1,0 +1,55 @@
+/* Layout */
+body.boxed-layout {
+	background-size:100px 100px;
+	background-repeat: repeat;
+	background-image:url('@{url}/bgnoise_lg.png');
+}
+.wrapper {
+	max-width:@wrapper_width;
+	position:relative;
+	background:@wrapper_background_color;
+}
+.boxed-layout .wrapper {
+	.box-shadow( 0px 0px 30px rgba(0,0,0,0.3) );
+	margin:@boxed_layout_padding auto !important;
+}
+.wide-layout .wrapper {
+	max-width:100% !important;
+	margin:0px auto !important;
+}
+
+@media (min-width: 1201px) {
+.container {
+	width:@wrapper_width;
+}
+}
+
+@media (max-width: 1200px) {
+.wrapper {
+    max-width:970px;
+}
+}
+
+@media (max-width: 991px) {
+.wrapper {
+    max-width:750px;
+}
+}
+
+@media (max-width: 767px) { 
+body {
+    background:none !important;
+}
+.wrapper {
+    margin: 0 auto !important;
+}
+.boxed-layout .wrapper {
+	margin:0 auto !important;
+}
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio:1.5),only screen and (-moz-min-device-pixel-ratio:1.5),only screen and (-o-min-device-pixel-ratio:3/2),only screen and (min-device-pixel-ratio:1.5) {
+body.boxed-layout {
+	background-image:url('@{url}/bgnoise_lg@2x.png');
+}
+}

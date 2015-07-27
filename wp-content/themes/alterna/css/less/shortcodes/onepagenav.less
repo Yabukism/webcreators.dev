@@ -1,0 +1,70 @@
+/* One Page Navigation  */
+.alterna-pagenav {
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    border-radius: 15px;
+    margin: 5px;
+    line-height: 20px;
+    position: fixed;
+    z-index: 8000;
+    li {
+        a {
+            height: 20px;
+            width: 20px;
+            border: 2px solid  #f5f5f5;
+            background: transparent;
+            display: block;
+            .border-radius(100%);
+			margin:3px;
+        }
+    }
+}
+.alterna-pagenav.left,.alterna-pagenav.right {
+    padding: 10px 3px;
+    right: 15px;
+    top: 50%;
+}
+.alterna-pagenav.left {
+    right:auto;
+    left:15px;
+}
+.alterna-pagenav.left li,.alterna-pagenav.right li {
+    margin:0;
+}
+.alterna-pagenav li a:hover {
+	border: 2px solid @theme_color;
+	background: #f5f5f5;
+}
+.alterna-pagenav li a.current {
+    border: 2px solid @theme_color;
+    background: @theme_color;
+}
+.alterna-pagenav.bottom {
+    padding: 3px 10px;
+    right: 50%;
+    bottom: 15px;
+    li {
+        margin:0;
+        float:left;
+    }
+}
+.alterna-pagenav.black {
+    li {
+        a {
+            border: 2px solid #2a2a2a;
+            background: transparent;
+        }
+    }
+}
+.alterna-pagenav.black li a:hover {
+    border: 2px solid @theme_color;
+	background: #2a2a2a;
+}
+.alterna-pagenav.black li a.current {
+    border: 2px solid @theme_color;
+    background: @theme_color;
+}
+.alterna-pagenav li a, .alterna-pagenav li a:hover, .alterna-pagenav li a.current {
+    .transition(600ms);
+}

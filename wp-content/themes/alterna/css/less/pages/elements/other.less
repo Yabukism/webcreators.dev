@@ -1,0 +1,74 @@
+/* Other Elements */
+.line {
+    float:left;
+    width:100%;
+}
+.left-line {
+    float:left;
+    width:20%;
+    height:2px;
+    background:@theme_color;
+}
+.right-line {
+    float:left;
+    width:80%;
+    height:1px;
+    background:#e1e1e1;
+    margin-top:1px;
+}
+.full-line {
+    height:1px;
+    background:#e1e1e1;
+}
+.post-edit {
+    i {
+        margin-right:5px;
+    }
+}
+#back-top {
+    display:none;
+    position:fixed;
+    right:5px;
+    bottom:10px;
+    width:46px;
+    height:46px;
+    cursor:pointer;
+    background-color:#333;
+    border-radius:4px;
+    background-image:url("@{url}/custom/icon_chevron_top.png");
+    background-size:30px 30px;
+    background-position:center;
+    background-repeat:no-repeat;
+    z-index:9000;
+    .transition(1s);
+}
+#back-top:hover {
+    background-color:@theme_color;
+}
+.post-ajax-element {
+    margin-bottom:20px;
+}
+.ajax-load-btn-container {
+    margin:20px 0;
+    text-align:center;
+}
+.ajax-load-content,.post-ajax-loading {
+    display:none;
+}
+.post-ajax-load-btn {
+    cursor:pointer;
+}
+.post-ajax-loading,.post-ajax-scroll-load {
+    line-height:32px;
+}
+.post-ajax-loading {
+    i {
+        margin-right:5px;
+    }
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio:1.5),only screen and (-moz-min-device-pixel-ratio:1.5),only screen and (-o-min-device-pixel-ratio:3/2),only screen and (min-device-pixel-ratio:1.5) {
+#back-top {
+	background-image:url("@{url}/custom/icon_chevron_top@2x.png");
+}
+}

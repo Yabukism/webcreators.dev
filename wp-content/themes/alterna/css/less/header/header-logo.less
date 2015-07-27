@@ -1,0 +1,98 @@
+/* Header Logo & Social */
+#alterna-header {
+    padding:25px 0px;
+	.logo {
+		float: left;
+	}
+	.logo a {
+		float:left;
+		display:block;
+		margin-top:@header_logo_padding_top;
+	}
+	.logo-retina {
+		display:none;
+	}
+}
+
+.header-style-2 {
+	#alterna-header {
+		.logo {
+			margin-top:@header_logo_padding_top + 15px;
+		}
+	}
+}
+
+.header-style-3 {
+	#alterna-header {
+		.logo {
+			a {
+				float: none;
+				margin: 0 auto;
+				text-align: center;
+			}
+		}
+	}
+}
+
+.header-style-4 {
+    #alterna-header {
+		.logo {
+			margin-top:@header_logo_padding_top + 23px;
+		}
+	}
+}
+
+.header-style-6 {
+    #alterna-header {
+		.logo {
+			margin-top:@header_logo_padding_top + 12px;
+		}
+	}
+}
+
+.fixed-logo {
+	display:none;
+}
+
+.fixed-logo a {
+    width:@fixed_logo_width;
+    height:@fixed_logo_height;
+    background-image:url(@fixed_logo_img);
+    background-size: @fixed_logo_width @fixed_logo_height;
+}
+
+@media (max-width: 767px) { 
+	#alterna-header .logo {
+		width:100%;
+		text-align:center;
+	}
+	#alterna-header .logo a {
+		margin:0px auto;
+		float:none;
+		display:inline-block;
+	}
+}
+@media only screen and (-Webkit-min-device-pixel-ratio:1.5),only screen and (-moz-min-device-pixel-ratio:1.5),only screen and (-o-min-device-pixel-ratio:3/2),only screen and (min-device-pixel-ratio:1.5) {
+#alterna-header {
+	.logo-default {
+		display:none;
+	}
+	.logo-retina {
+		display:block;
+	}
+}
+
+.header-style-3 {
+    #alterna-header {
+	.logo-retina {
+		    display:inline-block;
+	    }
+    }
+}
+
+.fixed-logo a {
+	background-image:url(@fixed_logo_img_retina);
+}
+
+}
+

@@ -1,0 +1,20 @@
+<wpml-config>
+    <custom-fields>
+        <custom-field action="copy">portfolio-type</custom-field>
+    </custom-fields>
+    <custom-types>
+        <custom-type translate="1">portfolio</custom-type>
+    </custom-types>
+    <taxonomies>
+        <taxonomy translate="1">portfolio_categories</taxonomy>
+    </taxonomies>
+    <admin-texts>
+        <key name="alterna_options">
+			<key name="header-banner-content" />
+			<key name="header-topbar-message" />
+			<key name="header-right-area-content" />
+            <key name="footer-copyright-message" />
+            <key name="footer-link-text" />
+        </key>
+    </admin-texts>
+</wpml-config>

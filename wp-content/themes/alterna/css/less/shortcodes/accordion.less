@@ -1,0 +1,70 @@
+/* Accordion & Toggle */
+.alterna-accordion {
+    margin-bottom:10px;
+    .accordion-panel {
+        margin-bottom:10px;
+        background:none;
+        border:none;
+        border-radius:0;
+        -webkit-box-shadow:none;
+        box-shadow:none;
+        border:1px solid #e8e8e8;
+        padding:10px;
+        border-radius:4px;
+    }
+    .accordion-title {
+        line-height:26px;
+        margin:0;
+        a {
+            position:relative;
+            padding-left:34px;
+            display:block;
+        }
+    }
+    .accordion-icon {
+        font-size:14px;
+        position:absolute;
+        left:0;
+        top:50%;
+        margin-top:-13px;
+        width:26px;
+        height:26px;
+        color:#ffffff;
+        padding:3px 5px;
+        text-align:center;
+        line-height:20px;
+        border-radius:4px;
+        i {
+            margin:0;
+        }
+    }
+    .accordion-heading {
+        .fa-plus {
+            display:none;
+        }
+        .fa-minus {
+            display:inline-block;
+        }
+        .collapsed {
+            .fa-plus {
+                display:inline-block;
+            }
+            .fa-minus {
+                display:none;
+            }
+        }
+    }
+    .accordion-body {
+        padding:10px;
+    }
+    .accordion-collapse {
+        margin-top:10px;
+        background:#efefef;
+        border-radius:4px;
+    }
+}
+.alterna-toggle {
+    border:1px solid #e8e8e8;
+    padding:10px;
+    border-radius:4px;
+}

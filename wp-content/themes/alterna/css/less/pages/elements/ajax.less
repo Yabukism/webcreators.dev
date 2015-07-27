@@ -1,0 +1,68 @@
+/* Ajax Elements */
+.post-ajax-border {
+    float:left;
+    border:1px #E8E8E8 solid;
+    padding:10px;
+    width:100%;
+    .box-shadow(1px 2px 5px 1px #EEE);
+}
+.post-ajax-element {
+    i {
+        margin-right:5px;
+    }
+    .post-ajax-content {
+        float:left;
+        width:100%;
+        margin-bottom:10px;
+    }
+    .post-mata-container {
+        float:left;
+        width:100%;
+        border-top:#E8E8E8 1px dotted;
+        border-bottom:#E8E8E8 dotted 1px;
+        padding:10px 0px;
+    }
+    .post-ajax-information {
+        float:left;
+        width:100%;
+    }
+    .post-type {
+        line-height:10px;
+        background:@theme_color;
+        float:left;
+        padding:10px 10px;
+        margin-right:10px;
+    }
+    .post-meta-content {
+        margin-left:60px;
+        .entry-title {
+            margin:0 0 10px;
+        }
+        .post-meta {
+            & > div {
+                float:left;
+                margin-right:10px;
+            }
+        }
+    }
+    .post-date {
+        float:left;
+        margin-bottom:5px;
+    }
+    .post-link {
+        float:right;
+    }
+    .entry-summary {
+        float:left;
+        margin-top:5px;
+        width:100%;
+    }
+    .more-link {
+        float:right;
+        font-size:12px;
+    }
+}
+
+@media (max-width: 480px) {
+.post-ajax-element {width:100%;}
+}

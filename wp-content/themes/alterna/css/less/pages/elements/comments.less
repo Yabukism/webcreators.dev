@@ -1,0 +1,134 @@
+/* Comments */
+
+
+#comments {
+	.comment-list {
+		ul.children {
+			margin-left:50px;
+		}
+		.popover-title {
+			font-size:18px;
+		}
+		li {
+			margin-left:0;
+		}
+		.comment-item {
+			margin-bottom:15px;
+			position:relative;
+			width:100%;
+			
+			.comment-content {
+				background-color:#FBFBFB;
+				border:1px #f0f0f0 solid;
+				margin-left:50px;
+				min-height:30px;
+				padding:15px;
+				
+				.comment-meta {
+					margin-bottom:10px;
+				}
+			}
+		}
+		.comment-reply-link {
+			color:#ffffff;
+			padding: 5px 16px;
+			background:@theme_color;
+			font-size:12px;
+			.border-radius(4px);
+		}
+		.comment-reply-link:hover {
+			color:#ffffff;
+			background:darken(@theme_color, 10%);
+		}
+	}
+	.comment-list, 
+	.comment-list ul {
+		list-style:none outside none;
+		margin:0px;
+	}
+	
+	#comment-form {
+		#comment-textarea {
+			#comment {
+				width:100%;
+				float:right;
+			}
+			#comment.logged-in {
+				float:left;
+			}
+		}
+	}
+	
+	#respond {
+		padding: 20px;
+		border: 1px solid #E1E1E1;
+		margin: 15px 0;
+		background: #F4F4F4;
+		
+		#cancel-comment-reply-link {
+			float:left;
+			margin-bottom:15px;
+		}
+		
+		.placeholding-input {
+			position:relative;
+			margin-bottom:15px;
+			overflow: hidden;
+			input {
+				width:100%;
+			}
+			.placeholder {
+				font-weight:normal;
+				color:#999;
+				cursor:text;
+				height:20px;
+				left:6px;
+				position:absolute;
+				top:5px;
+				margin:0px;
+				line-height:20px;
+				opacity:1;
+				-webkit-transition:500ms;
+				-moz-transition:500ms;
+				-o-transition:500ms;
+				transition:500ms;
+			}
+		}
+	}
+}
+
+.comment-wait-approved {
+    color:#F55D2D;
+}
+
+#comment-nav-above {
+    margin:10px 0;
+    float:left;
+    width:100%;
+    .next-post {
+        float:right;
+    }
+    .pre-post {
+        float:left;
+    }
+}
+#comment-alert-error,#comment-alert-error span {
+    display:none;
+}
+#comment-alert-error.show,#comment-alert-error .comment-alert-error-name.show,#comment-alert-error .comment-alert-error-email.show,#comment-alert-error .comment-alert-error-url.show,#comment-alert-error .comment-alert-error-message.show {
+    display:block;
+}
+
+.have-some {
+    .placeholder {
+		text-indent: -1000px;
+    }
+}
+
+@media (max-width: 767px) { 
+#comments {
+	.comment-list ul.children {
+		margin-left:0;
+	}
+}
+}
