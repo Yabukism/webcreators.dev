@@ -5,12 +5,12 @@
  * @since alterna 8.0
  */
 
-get_header();
+get_header(); 
 
 global $paged, $page_nums, $page_cats, $page_columns, $page_item_style, $page_auto_load, $page_image_no_crop, $page_show_filter;
 
-// get page layout
-$layout 			=	alterna_get_page_layout();
+// get page layout 
+$layout 			=	alterna_get_page_layout(); 
 $layout_class 		=	alterna_get_page_layout_class();
 $page_nums			=	penguin_get_post_meta_key('page-posts-num');
 $page_columns		=	penguin_get_post_meta_key('page-posts-cols');
@@ -37,7 +37,7 @@ $page_show_filter	=	penguin_get_post_meta_key('portfolio-show-filter');
 			get_template_part( 'template/portfolio/ajax-content');
         ?>
 		</section>
-		<?php if($layout != 1) { ?>
+		<?php if($layout != 1) { ?> 
         <aside class="alterna-col col-lg-3 col-md-4 col-sm-4 alterna-<?php echo $layout_class;?>"><?php generated_dynamic_sidebar(); ?></aside>
         <?php } ?>
     </div>

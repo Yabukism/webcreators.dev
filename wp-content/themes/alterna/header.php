@@ -23,7 +23,7 @@ if(is_home() && !is_front_page()){
 }
 
 // global layout
-$global_layout = 'boxed-layout';
+$global_layout = 'boxed-layout'; 
 if(intval(penguin_get_options_key('global-layout')) != 0){
 	$global_layout = 'wide-layout';
 }
@@ -47,10 +47,10 @@ $current_tax = get_query_var('taxonomy');
 	<link rel="shortcut icon" href="<?php echo (penguin_get_options_key('favicon') != "") ? penguin_get_options_key('favicon') : get_template_directory_uri()."/img/favicon.png";?>" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-
+	
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<script src="<?php echo get_template_directory_uri(); ?>/js/ie10-viewport-bug-workaround.js"></script>
-
+	
 	    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
@@ -65,7 +65,7 @@ $current_tax = get_query_var('taxonomy');
         	<?php get_template_part( 'template/header/topbar' );?>
             <?php get_template_part( 'template/header/style', intval(penguin_get_options_key('header-style-type')) + 1);?>
     	</div><!-- end header-wrap -->
-        <?php
+        <?php 
 		get_template_part( 'template/page/header-slider' );
 		//page title
 		if( class_exists( 'woocommerce') && ( ( is_tax() && taxonomy_exists('product_cat') && $current_tax == "product_cat" ) || ( is_tax() && taxonomy_exists('product_tag') && $current_tax == "product_tag" ) || is_singular('product') || is_shop() ) ) {
@@ -76,7 +76,7 @@ $current_tax = get_query_var('taxonomy');
 			}else{
 		?>
             <div class="page-header-wrap">
-                <?php get_template_part( 'template/page/header-title' );?>
+                <?php get_template_part( 'template/page/header-title' );?> 
             </div><!-- end page-header-wrap -->
         <?php } ?>
 		<div class="content-wrap">

@@ -64,5 +64,4 @@ function remove_img_attr( $html ) {
   $class = 'fancyBox';
   return str_replace( '<a ', '<a class="'. $class. '" ', $html );
 }
-
 ?>

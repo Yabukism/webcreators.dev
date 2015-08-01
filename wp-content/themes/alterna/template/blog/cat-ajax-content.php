@@ -5,8 +5,8 @@
  * @since alterna 8.4
  */
 
-get_header();
-
+get_header(); 
+	
 global $blog_page_id, $paged, $page_columns_class, $thumbnail_size;
 
 $layout				=	alterna_get_page_layout($blog_page_id);
@@ -25,13 +25,13 @@ $thumbnail_size = alterna_get_thumbnail_size(intval($page_columns), $page_image_
         <section class="<?php echo $layout == 1 ? 'col-md-12 col-sm-12' : 'alterna-col col-lg-9 col-md-8 col-sm-8 alterna-'.$layout_class; ?>">
 			<div class="ajax-main-area">
                 <section class="ajax-isotope row blog-ajax-type">
-                    <?php
+                    <?php 
                         while ( have_posts() ) {
                             the_post();
                             get_template_part( 'template/blog/ajax/content-style', $page_item_style); ?>
                     <?php } ?>
                 </section>
-                <?php
+                <?php 
                     if($wp_query->max_num_pages > $paged) {
                 ?>
                 <div class="ajax-load-content" data-link="<?php echo (isset($page_ajax_link) && $page_ajax_link != "" ? esc_url($page_ajax_link) : esc_url(get_pagenum_link($paged+1))) ;?>" data-page="<?php echo esc_attr($paged+1); ?>" data-max="<?php echo esc_attr($wp_query->max_num_pages); ?>"></div>
@@ -46,7 +46,7 @@ $thumbnail_size = alterna_get_thumbnail_size(intval($page_columns), $page_image_
                 <?php } ?>
             </div>
 		</section>
-		<?php if($layout != 1) { ?>
+		<?php if($layout != 1) { ?> 
             <aside class="alterna-col col-lg-3 col-md-4 col-sm-4 alterna-<?php echo $layout_class;?>"><?php generated_dynamic_sidebar($sidebar_name); ?></aside>
             <?php } ?>
     </div>

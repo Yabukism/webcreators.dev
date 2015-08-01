@@ -10,7 +10,7 @@
  *
  * @package    TGM-Plugin-Activation
  * @subpackage Example
- * @version    2.5.0
+ * @version    2.5.2
  * @author     Thomas Griffin, Gary Jones, Juliette Reinders Folmer
  * @copyright  Copyright (c) 2011, Thomas Griffin
  * @license    http://opensource.org/licenses/gpl-2.0.php GPL v2 or later
@@ -49,7 +49,7 @@ function themefocus_register_required_plugins() {
                 array(
                         'name'     				=> 'WP Retina Plugin', // The plugin name
                         'slug'     				=> 'wp-retina-2x', // The plugin slug (typically the folder name)
-                        'source'   				=> 'https://downloads.wordpress.org/plugin/wp-retina-2x.3.4.2.zip', // The plugin source
+                        'source'   				=> 'https://downloads.wordpress.org/plugin/wp-retina-2x.3.4.4.zip', // The plugin source
                         'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
                         'version' 				=> '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
                         'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
@@ -81,7 +81,7 @@ function themefocus_register_required_plugins() {
                 array(
                         'name'     				=> 'Visual Composer Plugin', // The plugin name
                         'slug'     				=> 'js_composer', // The plugin slug (typically the folder name)
-                        'source'   				=> get_template_directory_uri() . '/recommended_plugins/js_composer4.6.1.zip', // The plugin source
+                        'source'   				=> get_template_directory_uri() . '/recommended_plugins/js_composer4.6.2.zip', // The plugin source
                         'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
                         'version' 				=> '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
                         'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch

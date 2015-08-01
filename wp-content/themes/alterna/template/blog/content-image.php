@@ -6,7 +6,7 @@
  */
 global $blog_show_type;
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class('content-img entry-post '.(intval($blog_show_type) != 0 ? "blog-show-style-2" : ""));?> itemscope itemtype="http://schema.org/Article">
+<article id="post-<?php the_ID(); ?>" <?php post_class('entry-post '.(intval($blog_show_type) != 0 ? "blog-show-style-2" : ""));?> itemscope itemtype="http://schema.org/Article">
 <div class="row">
 <?php if(intval($blog_show_type) == 0){ ?>
     <aside class="entry-left-side col-md-3 col-sm-12">
@@ -21,7 +21,7 @@ global $blog_show_type;
         <div class="post-meta post-author"><i class="fa fa-user"></i><?php _e('by','alterna'); ?> <span itemprop="author"><?php if(intval(penguin_get_options_key('blog-author-link')) == 0) { the_author_link(); }else{ the_author_posts_link(); }?></span></div>
         <div class="post-meta post-comments"><i class="fa fa-comments"></i> <a href="<?php echo get_permalink(get_the_ID()).'#comments'; ?>"><span itemprop="interactionCount"><?php comments_number(__('No Comment' , 'alterna') , __('1 Comment' , 'alterna') , __('% Comments' , 'alterna')); ?></span></a></div>
     </aside>
-
+    
     <!-- post content -->
     <section class="entry-right-side col-md-9 col-sm-12">
         <?php if(has_post_thumbnail(get_the_ID())) { ?>
@@ -37,7 +37,7 @@ global $blog_show_type;
             </div>
         </div>
         <?php } ?>
-
+        
         <header class="entry-header">
         	<?php the_title( '<h3 class="entry-title" itemprop="name"><a href="' . esc_url( get_permalink() ) . '" itemprop="url">', '</a></h3>' ); ?>
         	<?php edit_post_link(__('Edit', 'alterna'), '<div class="post-edit"><i class="fa fa-edit"></i>', '</div>'); ?>
@@ -59,9 +59,9 @@ global $blog_show_type;
                 <a href="<?php echo get_permalink(); ?>"><?php echo get_the_post_thumbnail(get_the_ID(), "post-thumbnail" , array('alt' => get_the_title(),'title' => '')); ?></a>
             </div>
         </div>
-        <?php } ?>
+        <?php } ?> 
     </section>
-
+    
     <!-- post content -->
     <section class="entry-right-side col-md-6 col-sm-12">
         <header class="entry-header">
@@ -81,4 +81,4 @@ global $blog_show_type;
 <?php } ?>
 </div>
 </article>
-
+        

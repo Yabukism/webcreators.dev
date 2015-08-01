@@ -19,7 +19,7 @@ function alterna_get_post_type_icon($post_type,$type = 'blog'){
 			case 'video': $icon_type = 'big-icon-video'; break;
 			case 'audio': $icon_type = 'big-icon-music'; break;
 			case 'quote': $icon_type = 'big-icon-quote'; break;
-			default :
+			default : 
 				$icon_type = 'big-icon-file';
 		}
 	}else{
@@ -30,7 +30,7 @@ function alterna_get_post_type_icon($post_type,$type = 'blog'){
 			default : $icon_type = 'big-icon-picture';
 		}
 	}
-
+	
 	return $icon_type;
 }
 endif;
@@ -81,7 +81,7 @@ if ( ! function_exists( 'alterna_posted_on' ) ) :
  */
 function alterna_posted_on(){
 	?>
-	<div class="cat-links"><i class="fa fa-folder-open"></i><span itemprop="genre"><?php
+	<div class="cat-links"><i class="fa fa-folder-open"></i><span itemprop="genre"><?php 	
 		$categories = get_the_category();
 		$seperator = ' , ';
 		$output = '';
@@ -105,7 +105,7 @@ if ( ! function_exists( 'alterna_content_pagination' ) ) :
 function alterna_content_pagination($pagination_id, $pagination_class = '', $max_show_number = 2 , $query = ''){
 	global $wp_query;
 
-	if($query == ''){
+	if($query == ''){ 
 		$query = $wp_query;
 	}
 
@@ -117,7 +117,7 @@ function alterna_content_pagination($pagination_id, $pagination_class = '', $max
 		} else if (get_query_var('page')) {
 			$paged = get_query_var('page');
 		}
-
+		
 		?>
         <div id="<?php echo $pagination_id; ?>" class="<?php echo $pagination_class; ?>">
         	<ul class="pagination">
@@ -134,7 +134,7 @@ function alterna_content_pagination($pagination_id, $pagination_class = '', $max
             if($paged - $max_show_number > 2){
 				echo  '<li><span>...</span></li>';
 			}
-
+            
             for($k= $paged - $max_show_number; $k <= ($paged+$max_show_number) & $k <= $max_number; $k++){
                 if($k < 1){
 					continue;
@@ -183,28 +183,28 @@ endif;
 
 if ( ! function_exists( 'alterna_get_custom_font' ) ) :
 /**
- * get Custom Font For google font
+ * get Custom Font For google font	
  *
  * @since alterna 7.0
  */
 function alterna_get_custom_font(){
 	global $alterna_options,$google_fonts,$google_load_fonts,$google_custom_fonts;
-
+	
 	$google_load_fonts = "";
 	$google_custom_fonts = array();
-
+	
  	$general_font 				= 'Open Sans';
 	$general_font_size 			= '14px';
 	$menu_font					= 'Open Sans';
 	$menu_font_size				= '13px';
 	$title_font					= 'Open Sans';
-
+	
 	$font_names = array();
-
+	
 	if(penguin_get_options_key('custom-enable-font') == "on"){
 
 		$array = explode("|",$google_fonts);
-
+		
 		if( penguin_get_options_key('custom-general-font') !="0"){
 			$font_name = $array[intval($alterna_options['custom-general-font'])-1];
 			$general_font = alterna_get_current_font_name($font_name);
@@ -212,7 +212,7 @@ function alterna_get_custom_font(){
 		}else{
 			array_push($font_names,'Open+Sans:400,400italic,300,300italic,700,700italic');
 		}
-
+			
 		if( penguin_get_options_key('custom-menu-font') !="0"){
 			$font_name = $array[intval($alterna_options['custom-menu-font'])-1];
 			$menu_font = alterna_get_current_font_name($font_name);
@@ -220,7 +220,7 @@ function alterna_get_custom_font(){
 		}else{
 			array_push($font_names,'Open+Sans:400,400italic,300,300italic,700,700italic');
 		}
-
+		
 		if( penguin_get_options_key('custom-title-font') !="0"){
 			$font_name = $array[intval($alterna_options['custom-title-font'])-1];
 			$title_font = alterna_get_current_font_name($font_name);
@@ -235,7 +235,7 @@ function alterna_get_custom_font(){
 	$google_custom_fonts['general_font']				= $general_font;
 	$google_custom_fonts['menu_font']				= $menu_font;
 	$google_custom_fonts['title_font']				= $title_font;
-
+	
 	$google_load_fonts = implode("|",array_unique($font_names));
 }
 endif;
@@ -356,19 +356,19 @@ function alterna_page_links() {
     if( !is_front_page() ) {
        $output .= '<li><a href="'.home_url().'" title="'.__('Home','alterna').'"><i class="fa fa-home"></i></a></li>';
     }
-
+    
 	// page is used home page as posts
 	if((is_home() || is_category() || is_tag() || is_date() || is_single()) && !is_front_page()){
-
+		
 		$single_type = get_post_type(get_the_ID());
-
+		
 		if(is_single() && $single_type == "portfolio") {
 			global $portfolio_default_page_id;
-
+		
 			// show default portfolio page
 			$portfolio_default_page_id  = alterna_get_default_portfolio_page();
 			$portfolio_page = get_page( $portfolio_default_page_id );
-
+			
 			$output .= '<li><i class="fa fa-chevron-right"></i><a href="'.get_permalink($portfolio_default_page_id).'" title="'.$portfolio_page->post_title.'">'.$portfolio_page->post_title.'</a></li>';
 		} else {
 			if(intval(get_option('page_for_posts')) > 0) {
@@ -377,26 +377,26 @@ function alterna_page_links() {
 			}
 		}
 	}
-
+	
 	// page is category
 	if(is_category()){
 		$cat = get_category( get_query_var( 'cat' ) );
 		$output .= '<li><i class="fa fa-chevron-right"></i><span>'.__('Category Archive for "','alterna').$cat->name.'"</span></li>';
 	}
-
+	
 	// show portfolio category link
 	if(taxonomy_exists('portfolio_categories') && is_tax()) {
 		global $alterna_options,$term,$portfolio_default_page_id;
-
+		
 		// show default portfolio page
 		$portfolio_default_page_id  = alterna_get_default_portfolio_page();
 		$portfolio_page = get_page( $portfolio_default_page_id );
-
+		
 		$output .= '<li><i class="fa fa-chevron-right"></i><a href="'.get_permalink($portfolio_default_page_id).'" title="'.$portfolio_page->post_title.'">'.$portfolio_page->post_title.'</a></li>';
 		// show category name
 		$output .= '<li><i class="fa fa-chevron-right"></i><span>'.__('Category Archive for "','alterna').$term->name.'"</span></li>';
 	}
-
+	
 	// show page title
 	if(is_page() || is_single()){
 		global $post;
@@ -413,7 +413,7 @@ function alterna_page_links() {
 				$output .= $breadcrumbs[$i];
 			}
     	}
-
+		
 		//add category link for post
 		if(is_single()){
 			if( is_singular('post') && penguin_get_options_key('blog-enable-breadchrumb') == 'on'){
@@ -433,26 +433,26 @@ function alterna_page_links() {
 				if($categories != ""){ $output .= '<li><i class="fa fa-chevron-right"></i>'.$categories.'</li>'; }
 			}
 		}
-
+		
 		$output .= '<li><i class="fa fa-chevron-right"></i><span>'.get_the_title().'</span></li>';
 	}
-
+	
 	// tag page
 	if(is_tag()) {
 
 		$output .= '<li><i class="fa fa-chevron-right"></i><span>'.__('Posts Tagged "','alterna').single_tag_title('', false).'"</span></li>';
 	}
-
+	
 	// 404 page
 	if(is_404()){
 		$output .= '<li><i class="fa fa-chevron-right"></i><span>'.__('404 Error' , 'alterna').'</span></li>';
 	}
-
+	
 	// date page
 	if(is_date()){
 		$output .= '<li><i class="fa fa-chevron-right"></i><span>'.__('Date Archives for "','alterna').get_the_time('Y-M').'"</span></li>';
 	}
-
+	
 	// author page
 	if(is_author()){
 		global $author_name;
@@ -470,30 +470,30 @@ if ( ! function_exists( 'alterna_page_title' ) ) :
  */
 function alterna_page_title(){
 	$output = '';
-
+	
 	// category page
 	if(is_category()) $output = single_cat_title('', false);
-
+	
 	// tag page
 	if(is_tag()) $output = single_tag_title('', false);
-
+	
 	// search page
 	if(is_search()) $output = __('Search' , 'alterna');
-
+	
 	// 404 page
 	if(is_404()) $output = __('Page Not Found' , 'alterna');
-
+	
 	// date page
 	if(is_date())  $output = get_the_time('Y-M');
-
+	
 	// author page
 	if(is_author()) $output = __('Author' , 'alterna');
-
+	
 	if(taxonomy_exists('portfolio_categories') && is_tax()) {
 		global $term;
 		$output = $term->name;
 	}
-
+	
 	return $output;
 }
 endif;
@@ -508,7 +508,7 @@ function alterna_get_topbar_content($position = 0){
 	$topbar_custom_style = penguin_get_options_key('topbar-elements');
 
 	if($topbar_custom_style && $topbar_custom_style != ""){
-		$topbars 	= explode("|", $topbar_custom_style);
+		$topbars 	= explode("|", $topbar_custom_style); 
 		foreach($topbars as $topbar){
 			$option = explode("-", $topbar);
 			if(count($option) > 1 && intval($option[1]) != 2){
@@ -520,7 +520,7 @@ function alterna_get_topbar_content($position = 0){
 									'container_class'	=> 'topbar-element',
 									'menu_class'    	=> 'alterna-topbar-menu',
 									'fallback_cb'	  	=> 'alterna_show_setting_topbar_menu'
-								);
+								); 
 								wp_nav_menu($alterna_topbar_menu);
 								break;
 						case '1':
@@ -555,7 +555,7 @@ function alterna_get_topbar_content($position = 0){
 									echo '</ul></div>';
 								}
 								break;
-
+						
 					}
 				}
 			}
@@ -596,11 +596,11 @@ if(intval($align) == 1){
 }
 
 
-alterna_add_background_style('page', 'body.boxed-layout', 1, false, $options);
-alterna_add_background_style('page-header','#alterna-header',1, false, $options);
-alterna_add_background_style('page-title','#page-header',1, false, $options);
-alterna_add_background_style('page-content','.content-wrap',1, false, $options);
-alterna_add_background_style('page-footer','.footer-content',1, false, $options);
+alterna_add_background_style('page', 'body.boxed-layout', 1, false, $options); 
+alterna_add_background_style('page-header','#alterna-header',1, false, $options); 
+alterna_add_background_style('page-title','#page-header',1, false, $options); 
+alterna_add_background_style('page-content','.content-wrap',1, false, $options); 
+alterna_add_background_style('page-footer','.footer-content',1, false, $options); 
 if(penguin_get_post_meta_key('post-css-style',$post_id) != ""){
 	echo penguin_get_post_meta_key('post-css-style',$post_id);
 }
@@ -609,19 +609,19 @@ if(penguin_get_post_meta_key('post-css-style',$post_id) != ""){
 only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
-<?php
-alterna_add_background_style('page', 'body.boxed-layout', 1, true, $options);
-alterna_add_background_style('page-header','#alterna-header',1, true, $options);
-alterna_add_background_style('page-title','#page-header',1, true, $options);
-alterna_add_background_style('page-content','.content-wrap',1, true, $options);
+<?php 
+alterna_add_background_style('page', 'body.boxed-layout', 1, true, $options); 
+alterna_add_background_style('page-header','#alterna-header',1, true, $options); 
+alterna_add_background_style('page-title','#page-header',1, true, $options); 
+alterna_add_background_style('page-content','.content-wrap',1, true, $options); 
 alterna_add_background_style('page-footer','.footer-content',1, true, $options);
 if(penguin_get_post_meta_key('post-css-retina-style',$post_id) != ""){
 	echo penguin_get_post_meta_key('post-css-retina-style',$post_id);
 }
-?>
+?>	
 }
 </style>
-        <?php
+        <?php 
 	}
 }
 endif;
@@ -667,8 +667,8 @@ function alterna_get_all_template_type_pages($template = array(), $re_id = false
 				'post_status' => 'publish',
 				'sort_column' => 'ID',
 				'sort_order' => 'asc'
-			);
-			$pages = get_pages($args);
+			); 
+			$pages = get_pages($args); 
 			if(!empty($pages)) {
 				foreach($pages as $page){
 					if($re_id){
@@ -744,7 +744,7 @@ function alterna_get_custom_all_categories($taxonomies,$bool = false){
 	$categories = get_terms($taxonomies);
 	$output = "";
 	// return <li> html code
-	if($bool){
+	if($bool){ 
 		foreach($categories as $category){
 			$output .= '<li>'.strtoupper($category->name).'</li>';
 		}
@@ -794,7 +794,7 @@ if ( ! function_exists( 'alterna_get_portfolio_list_by_categories' ) ) :
 function alterna_get_portfolio_list_by_categories($slugs = array(),$re_count = false){
 	$args = array(
 			'post_type' => 'portfolio',
-			'posts_per_page' => -1,
+			'posts_per_page' => -1, 
 			'tax_query' => array(
 				array(
 					'taxonomy' => 'portfolio_categories',
@@ -803,7 +803,7 @@ function alterna_get_portfolio_list_by_categories($slugs = array(),$re_count = f
 				)
 			);
 	$the_query = new WP_Query($args);
-
+	
 	if($re_count){
 		if($the_query->have_posts()) return $the_query->post_count;
 		return 0;
@@ -847,7 +847,7 @@ if ( ! function_exists( 'alterna_get_custom_portfolio_category_links' ) ) :
  * @since alterna 7.0
  */
 function alterna_get_custom_portfolio_category_links($categories , $sep ='' , $taxonomies = "portfolio_categories"){
-
+	
 	$output = '';
 	if( !empty($categories) ){
 		$bool = false;
@@ -901,7 +901,7 @@ function alterna_get_social_list($extra_name='',$topbar = false, $data = null, $
 				array('email','Email','envelope'),
 				array('rss','Rss')
 			);
-
+	
 	if($data != null){
 		foreach($social_list as $social_item){
 			if(isset($data['type']) && $data['type'] == $social_item[0]) {
@@ -912,16 +912,16 @@ function alterna_get_social_list($extra_name='',$topbar = false, $data = null, $
 					$data['target'] = '_blank';
 				}
 				$str .= '<li class="social"><a  href="'.esc_attr($data['url']).'" target="'.esc_attr($data['target']).'"';
-
+				
 				if(isset($data['tooltip']) && $data['tooltip'] == "yes"){
 					$str .= ' title="'.esc_attr($social_item[1]).'" class="show-tooltip"';
 					if(isset($data['placement']) && $data['placement'] != ""){
 						$str .= ' data-placement="'.esc_attr($data['placement']).'"';
 					}
 				}
-
+				
 				$str .= '><span class="alterna-icon-'.esc_attr($social_item[0]).'"';
-
+				
 				if($data['bg_color'] != "" || $data['color'] != ""){
 					$str .= ' style="';
 					if($data['bg_color'] != ""){
@@ -932,7 +932,7 @@ function alterna_get_social_list($extra_name='',$topbar = false, $data = null, $
 					}
 					$str .= '"';
 				}
-
+				
 				$str .= '><i class="fa fa-'.(isset($social_item[2]) ? esc_attr($social_item[2]) : esc_attr($social_item[0])).'"></i></span></a></li>';
 			}
 		}
@@ -947,7 +947,7 @@ function alterna_get_social_list($extra_name='',$topbar = false, $data = null, $
 			}
 		}
 	}
-
+	
 	return $str;
 }
 endif;
@@ -982,12 +982,12 @@ function alterna_get_gallery_list($post_id, $thumbs_size, $fancybox_name = 'fanc
 	$out_html = '';
 	if(count($img_list) > 0){
 		foreach($img_list as $item_id){
-			$attachment_image = wp_get_attachment_image_src($item_id, $thumbs_size);
-			$full_image = wp_get_attachment_image_src($item_id, 'full');
+			$attachment_image = wp_get_attachment_image_src($item_id, $thumbs_size); 
+			$full_image = wp_get_attachment_image_src($item_id, 'full'); 
 			$out_html .= '<li><a href="'.esc_url($full_image[0]).'" class="fancybox-thumb" rel="'.$fancybox_name.'['.$post_id.']"><img src="'.esc_url($attachment_image[0]).'" alt=""></a></li>';
 		}
 	}
-
+	
 	return $out_html;
 }
 endif;
@@ -1050,7 +1050,7 @@ function alterna_comment_form(){
         	</div>
             <div class="row"><div class="col-md-12"><?php cancel_comment_reply_link(); ?></div></div>
 			<form id="comment-form" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
-
+        	
             <?php if ( is_user_logged_in() ) : ?>
 
             <p><?php _e('Logged in as', 'alterna'); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account"><?php _e('Log out &raquo;', 'alterna'); ?></a></p>
@@ -1069,7 +1069,7 @@ function alterna_comment_form(){
                 <?php comment_id_fields(); ?>
                 <?php do_action('comment_form', get_the_ID()); ?>
             </div>
-
+		
 		<?php else : ?>
         	<div class="row">
             	<div id="comment-input" class="col-md-6 col-sm-12">
@@ -1086,7 +1086,7 @@ function alterna_comment_form(){
                         <label for="url" class="placeholder"><?php _e('Website', 'alterna'); ?></label>
                     </div>
             	</div>
-
+            
             	<div id="comment-textarea" class="col-md-6 col-sm-12">
                 	<div class="placeholding-input">
                 		<textarea name="comment" id="comment" cols="60" rows="5" tabindex="4" class="textarea-comment"></textarea>
@@ -1104,7 +1104,7 @@ function alterna_comment_form(){
                 <?php comment_id_fields(); ?>
                 <?php do_action('comment_form', get_the_ID()); ?>
             </div>
-
+    
             <?php endif; ?>
         </form>
     </div>
@@ -1122,7 +1122,7 @@ if ( ! function_exists( 'alterna_comment' ) ) :
 function alterna_comment($comment, $args, $depth) {
 	$GLOBALS['comment'] = $comment;
 	extract($args, EXTR_SKIP);
-
+		
 	if ( 'div' == $args['style'] ) {
 		//$tag = 'div';
 		$add_below = 'comment';
@@ -1131,11 +1131,11 @@ function alterna_comment($comment, $args, $depth) {
 		$add_below = 'div-comment';
 	}
 	?>
-
+    
     <li id="comment-<?php comment_ID() ?>">
     	<article id="div-comment-<?php comment_ID() ?>" class="comment-item">
         	<div class="gravatar"><?php if ($args['avatar_size'] != 0) echo  get_avatar( $comment, $args['avatar_size']); ?></div>
-
+        	
         	<div class="comment-content">
             	<div class="comment-meta"><span class="author-name"><?php echo comment_author_link($comment->comment_ID);?></span><span>&nbsp;&nbsp;</span><span class="comment-date"><?php echo get_comment_date(); ?> <?php _e('at', 'alterna'); ?> <?php echo get_comment_time(); ?></span></div>
             	<?php comment_text(); ?>
@@ -1143,35 +1143,35 @@ function alterna_comment($comment, $args, $depth) {
 				<?php if ($comment->comment_approved == '0') : ?>
                       <em class="comment-wait-approved"><?php _e('Your comment is awaiting approved.' , 'alterna') ?></em>
             	<?php endif; ?>
-
+            
         	</div>
     	</article>
-    <?php
+    <?php 
 }
 endif;
 
-if ( ! function_exists( 'alterna_get_blog_widget_post' ) ) :
+if ( ! function_exists( 'alterna_get_blog_widget_post' ) ) :		
 /**
  * Get blog posts for sidebar widget
  *
  * @since alterna 7.0
  */
 function alterna_get_blog_widget_post($type = "", $per_page = "", $orderby = "", $cat_in = "", $tag_in = "", $post__in = "", $post__not_in = "", $order = "") {
-
+	
 	if($per_page == ""){
 		$per_page = 4;
 	}
-
+	
 	$args = array('post_type' => 'post', 'post_status' => 'publish' , 'posts_per_page' => $per_page);
-
+	
 	if($orderby != ""){
 		$args['orderby']  = $orderby;
 	}
-
+	
 	if($order != ""){
 		$args['order']  = $order;
 	}
-
+	
 	switch($type){
 		case 'featured':
 				$post_ids = explode("," , $post__in);
@@ -1187,7 +1187,7 @@ function alterna_get_blog_widget_post($type = "", $per_page = "", $orderby = "",
 		case 'related':
 				$post_cats = explode("," , $cat_in);
 				$post_tags = explode("," , $tag_in);
-
+				
 				if(count($post_cats) == 0 && count($post_tags) == 0){
 					return "";
 				}
@@ -1205,12 +1205,12 @@ function alterna_get_blog_widget_post($type = "", $per_page = "", $orderby = "",
 	}
 
 	$blog_posts = new WP_Query($args);
-
+	
 	return $blog_posts;
 }
 endif;
 
-if ( ! function_exists( 'alterna_get_portfolio_widget_post' ) ) :
+if ( ! function_exists( 'alterna_get_portfolio_widget_post' ) ) :		
 /**
  * Get portfolio posts for sidebar widget
  *
@@ -1220,17 +1220,17 @@ function alterna_get_portfolio_widget_post($type = "", $per_page = "", $orderby 
 	if($per_page == ""){
 		$per_page = 4;
 	}
-
+	
 	$args=array( 'post_type' => 'portfolio', 'post_status' => 'publish', 'posts_per_page' => $per_page );
-
+	
 	if($orderby != ""){
 		$args['orderby']  = $orderby;
 	}
-
+	
 	if($order != ""){
 		$args['order']  = $order;
 	}
-
+			 
 	switch($type){
 		case 'featured':
 				$post_ids = explode("," , $post__in);
@@ -1246,25 +1246,25 @@ function alterna_get_portfolio_widget_post($type = "", $per_page = "", $orderby 
 				if(count($cat_slugs) == 0 && count($tag_slugs) == 0){
 					return "";
 				}
-
+				
 				$args['tax_query'] = array();
 				if(count($cat_slugs) > 0 && $cat_slugs[0] != ""){
 					$args['tax_query'][] = array('taxonomy' => 'portfolio_categories', 'field' => 'slug', 'terms' => $cat_slugs);
 				}
-
+				
 				if(count($tag_slugs) > 0  && $tag_slugs[0] != ""){
 					$args['tax_query'][] = array('taxonomy' => 'portfolio-tags', 'field' => 'slug', 'terms' => $tag_slugs);
 				}
 			break;
 	}
-
+	
 	if($post__not_in != ""){
 		$post__not_in = explode("," , $post__not_in);
 		$args['post__not_in'] = $post__not_in;
 	}
 
 	$portfolios = new WP_Query($args);
-
+	
 	return $portfolios;
 }
 endif;
@@ -1359,7 +1359,7 @@ function alterna_get_footer_widget_active_items(){
 	$footer_widget_style = intval(penguin_get_options_key('footer-widget-style'));
 	$count = 0;
 	if (function_exists('dynamic_sidebar')){
-
+		
 		for($i = 1;$i<5;$i++){
 			if(is_active_sidebar('sidebar-footer-'.$i)){
 				//1-1-1
@@ -1382,13 +1382,13 @@ function alterna_get_footer_widget_active_items(){
 					}
 					continue;
 				}
-
+				
 				// full width
 				if($footer_widget_style == 7){
 					$widgets[] = array('col-md-12 col-sm-12','sidebar-footer-'.$i);
 					break;
 				}
-
+				
 				//'1-1-1-1','1-2-1','2-1-1','1-1-2','2-2','1-3','3-1'
 				if($footer_widget_style == 0 || ($footer_widget_style == 1 && $count != 1) || ($footer_widget_style == 2 && $count != 0) || ($footer_widget_style == 3 && $count != 2) || ($footer_widget_style == 5 && $count == 0) || ($footer_widget_style == 6 && $count == 1)){
 					$widgets[] = array('col-md-3 col-sm-3','sidebar-footer-'.$i);
@@ -1426,8 +1426,8 @@ function alterna_add_background_style($key, $target, $type_key = 0, $retina = fa
 		<?php
 		}else if(intval(penguin_get_options_key($key.'-bg-type',$options,false,'',true)) == ($type_key + 1) && penguin_get_options_key($key.'-bg-image',$options,false,'',true) != ""){
 		?>
-<?php echo $target; ?> {
-	background: url(<?php echo penguin_get_options_key($key.'-bg-image',$options,false,'',true); ?>) no-repeat center center fixed;
+<?php echo $target; ?> { 
+	background: url(<?php echo penguin_get_options_key($key.'-bg-image',$options,false,'',true); ?>) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -1439,7 +1439,7 @@ function alterna_add_background_style($key, $target, $type_key = 0, $retina = fa
 <?php echo $target; ?>{
 	background:#<?php echo penguin_get_options_key($key.'-bg-color',$options,false,'',true); ?>;
 }
-		<?php
+		<?php	
 		}
 		if(intval(penguin_get_options_key($key.'-bg-type',$options,false,'',true)) >= $type_key){
 			//footer copyright area color
