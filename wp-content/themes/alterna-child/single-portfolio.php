@@ -49,7 +49,7 @@ if($sidebar_name == ''|| $sidebar_name == "Global Sidebar"){
       ?>
         </section>
         <?php if($layout != 1) { ?>
-        <aside class="alterna-col col-lg-3 col-md-4 col-sm-4 alterna-<?php echo $layout_class;?>"><?php include ('sidebar-2.php'); ?><?php generated_dynamic_sidebar($sidebar_name); ?></aside>
+        <aside class="alterna-col col-lg-3 col-md-4 col-sm-4 alterna-<?php echo $layout_class;?>"><?php include ('sidebar-2.php'); ?><?php generated_dynamic_sidebar('single-portfolio'); ?></aside>
         <?php } ?>
     </div>
 </div>
