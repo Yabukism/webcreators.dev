@@ -25,6 +25,10 @@ h6 {font-family: 'YuGothic', 'Yu Gothic', '游ゴシック', '游ゴシック体
 body {
   font-size: 16px;
 }
+.wp-caption p.wp-caption-text {
+  font-size: 14px;
+  padding: 8px 4px 0px;
+}
 
 .mb-1em { margin-bottom: 1em;}
 .bg-gray {
