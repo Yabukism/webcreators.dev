@@ -148,18 +148,22 @@ div.entry-content {
 }
 
 /* Sidebar */
-.widget_text ul {
+.widget_text ul,
+.toc_widgetul {
   list-style: none outside none;
   margin: 0px;
 }
-.widget_text ul li ul {
+.widget_text ul li ul,
+.toc_widget ul li ul {
   list-style: none outside none;
 }
-.widget_text ul li {
+.widget_text ul li,
+.toc_widget ul li {
   float: left;
   width: 100%;
 }
-.widget_text ul li a {
+.widget_text ul li a,
+.toc_widget ul li a {
   float: left;
   width: 100%;
   padding: 8px 10px;
@@ -172,14 +176,19 @@ div.entry-content {
   background: #333;
   color: #999 !important;
 }
-.widget_text ul li a:hover{
+.widget_text ul li a:hover,
+.toc_widget ul li a:hover{
   background: #f7f7f7;
 }
 .footer-top-content .widget_text ul li a:hover {
   background: #7ab80e;
   color: #fff !important;
 }
-.widget_text ul li a::before {
+.footer-top-content .widget-alterna-recent-portfolios h5 {
+  padding: 0 1em;
+}
+.widget_text ul li a::before,
+.toc_widget ul li a:before {
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
@@ -190,14 +199,24 @@ div.entry-content {
   text-decoration: inherit;
   width: auto;
 }
-.widget_text ul li a::before  {
+.widget_text ul li a:before,
+.toc_widget ul.toc_widget_list li a:before,
+.toc_widget ul.toc_widget_list li ul li a:before {
   content: "";
+}
+.toc_widget ul.toc_widget_list li ul li ul li a:before {
+  content: "\f105";
 }
 .widget_text li ul a  {
   padding-left: 25px;
 }
 .widget_text li ul li ul a {
   padding-left: 50px;
+}
+.widget .searchandfilter {
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
 }
 .alterna-right .essb-profiles {
   float: left;
@@ -229,8 +248,6 @@ div.entry-content {
   width: 100%;
   background: #ffffff;
   border: 1px #e8e8e8 solid;
-  padding: 10px;
-  line-height: 20px;
   font-size: 12px;
   color: #666;
   border-radius: 0;
@@ -241,6 +258,99 @@ div.entry-content {
 .widget .searchandfilter select {
   min-width: 100%;
 }
+/* Toc plugin and  widget */
+#toc_container ul,#toc_container li {
+  margin:0;
+  padding:0;
+}
+#toc_container.no_bullets ul,
+#toc_container.no_bullets li,
+#toc_container.no_bullets ul li,
+.toc_widget_list.no_bullets,
+.toc_widget_list.no_bullets li {
+  background:none;
+  list-style-type:none;
+  list-style:none;
+}
+#toc_container.have_bullets li {
+  padding-left:12px;
+}
+#toc_container ul ul {
+  margin-left:1.5em;
+}
+#toc_container {
+  background:#f9f9f9;
+  border:1px solid #aaa;
+  padding:10px;
+  margin-bottom:1em;
+  width:auto;
+  display:table;
+  font-size:95%;
+}
+#toc_container.toc_light_blue {
+  background:#edf6ff;
+}
+#toc_container.toc_white {
+  background:#fff;
+}
+#toc_container.toc_black {
+  background:#000;
+}
+#toc_container.toc_transparent {
+  background:none transparent;
+}
+#toc_container p.toc_title {
+  text-align:center;
+  font-weight:700;
+  margin:0;
+  padding:0;
+}
+#toc_container.toc_black p.toc_title {
+  color:#aaa;
+}
+#toc_container span.toc_toggle {
+  font-weight:400;
+  font-size:90%;
+}
+#toc_container p.toc_title + ul.toc_list {
+  margin-top:1em;
+}
+.toc_wrap_left {
+  float:left;
+  margin-right:10px;
+}
+.toc_wrap_right {
+  float:right;
+  margin-left:10px;
+}
+#toc_container a {
+  text-decoration:none;
+  text-shadow:none;
+}
+#toc_container a:hover {
+  text-decoration:underline;
+}
+.toc_sitemap_posts_letter {
+  font-size:1.5em;
+  font-style:italic;
+}
+.toc_widget ul.toc_widget_list {
+  margin-left: 0;
+}
+.toc_widget ul.toc_widget_list ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+.toc_widget ul.toc_widget_list li ul li a {
+  padding-left: 1em;
+}
+.toc_widget ul.toc_widget_list li ul li ul li a {
+  padding-left: 2em;
+}
+.toc_widget ul.toc_widget_list li ul li ul li ul a {
+  padding-left: 3em;
+}
+
 .entry-content .sidebar-searchform input[type=text] {
   height: 38px;
 }
@@ -253,4 +363,19 @@ div.entry-content {
 }
 .no-ruby rp{
   display:none;
+}
+
+h3.widget-title {
+    text-align: center;
+    border-bottom: 2px solid green;
+    line-height: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    float: left;
+    width: 100%;
+}
+h3.widget-title span {
+    background: #fff;
+    padding: 0 15px;
+    text-align: center;
 }

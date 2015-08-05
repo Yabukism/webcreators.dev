@@ -76,9 +76,9 @@ $thumbnail_size = 'alterna-nocrop-thumbs';
 
       <?php wp_link_pages(); ?>
     </div>
-   <div class="footnote">
-    <?php generated_dynamic_sidebar('Footnote'); ?>
-  </div>
+    <div class="footnote">
+      <?php dynamic_sidebar ('sidebar-5'); ?>
+    </div>
 
 
     <?php if(penguin_get_options_key('portfolio-enable-share') == "on") { ?>
@@ -87,13 +87,13 @@ $thumbnail_size = 'alterna-nocrop-thumbs';
    </div>
    <?php } ?>
 
-</div>
+ </div>
 </div>
 <?php
 if(penguin_get_options_key('portfolio-related-enable') == "on") { ?>
 <div class="post-related">
   <div class="alterna-title">
-    <h3><?php _e('You may also like' , 'alterna'); ?></h3>
+  <h3><?php _e('近い年代のできごと' , 'alterna'); ?></h3>
     <div class="line"></div>
   </div>
   <?php
