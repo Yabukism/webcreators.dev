@@ -110,7 +110,7 @@ function alterna_init_styles_scripts() {
 	/* bootstrap & fontawesome css files */
 	if(penguin_get_options_key('bootstrap-fontawesome-cdn') == "on"){
 		wp_enqueue_style( 'bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' , array() , $ver );
-		wp_enqueue_style( 'fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' , array() , $ver );
+		wp_enqueue_style( 'fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' , array() , $ver );
 	}else{
 		wp_enqueue_style( 'bootstrap', $dir . '/bootstrap/css/bootstrap.min.css' , array() , $ver );
 		wp_enqueue_style( 'fontawesome', $dir . '/fontawesome/css/font-awesome.min.css' , array() , $ver );	

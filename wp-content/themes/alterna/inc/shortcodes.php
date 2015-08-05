@@ -17,7 +17,7 @@ function alterna_title_func($atts, $content = null){
 		  'type'		=>	'default',
 		  ), $atts ) );
 	
-	if($icon_color == 'theme'){
+	if($icon_color == 'theme' || $icon_color == ''){
 		$icon_color = 'btn-theme';
 	}
 	

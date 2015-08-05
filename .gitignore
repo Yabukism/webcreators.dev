@@ -16,3 +16,5 @@ sitemap.xml.gz
 Movefile
 /wp-content/themes/alterna-child/_*
 xxx*
+/wp-snapshots/
+remote add origin https://Yabukism:200373Ku@github.com/Yabukism/webcreators.dev.git
