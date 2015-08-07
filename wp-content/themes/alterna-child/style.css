@@ -25,10 +25,6 @@ h6 {font-family: 'YuGothic', 'Yu Gothic', '游ゴシック', '游ゴシック体
 body {
   font-size: 16px;
 }
-.wp-caption p.wp-caption-text {
-  font-size: 14px;
-  padding: 8px 4px 0px;
-}
 
 .mb-1em { margin-bottom: 1em;}
 .bg-gray {
@@ -43,12 +39,43 @@ h3.bg-gray {
 .bg-success {
   padding: 15px;
 }
+.white {
+  color: #eee;
+}
+
 /* Single entry content */
 .entry-content a img {
   border: 3px solid #27AE60;
 }
+
+.wp-caption {
+  background: #fff;
+  border: none;
+  max-width: 100% !important;
+  padding: 0;
+  text-align: center;
+}
+.wp-caption img {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+}
+.entry-content .wp-caption a img,
+.amazonjs_image a img {
+  border: none;
+}
+.wp-caption p.wp-caption-text {
+  font-size: 14px;
+  padding: 8px 0 0px;
+}
+.wp-caption.alignnone { 
+  margin: 5px 0 20px 0;
+}
 .entry-content a:hover img {
   border: 3px solid #2980B9;
+}
+.page-header-content h1,h2,h3, h4, p {
+  margin-bottom: 0;
 }
 /* Post page content */
 .entry-content h2,
@@ -116,6 +143,9 @@ h3.bg-gray {
 .single-history .post-meta>div {
   float: left;
   margin-right: 10px;
+}
+.single-portfolio-left-content, .single-portfolio-right-content {
+  width: 100%;
 }
 
 /* Single page */

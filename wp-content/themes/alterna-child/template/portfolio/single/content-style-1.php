@@ -8,8 +8,7 @@ $portfolio_type = intval(penguin_get_post_meta_key('portfolio-type'));
 $thumbnail_size = 'alterna-nocrop-thumbs';
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-entry'); ?> itemscope itemtype="http://schema.org/CreativeWork">
-  <div class="row">
-   <div class="single-portfolio-left-content col-lg-12 col-md-12 col-sm-12" >
+   <div class="single-portfolio-left-content" >
      <?php if($portfolio_type == 1) { ?>
      <div class="post-element-content">
       <div class="flexslider alterna-fl post-gallery">
@@ -87,7 +86,7 @@ $thumbnail_size = 'alterna-nocrop-thumbs';
    </div>
    <?php } ?>
 
- </div>
+
 </div>
 <?php
 if(penguin_get_options_key('portfolio-related-enable') == "on") { ?>

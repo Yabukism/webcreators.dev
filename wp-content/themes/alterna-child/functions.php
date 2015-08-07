@@ -8,35 +8,11 @@ function custom_editor_settings( $initArray ) {
 }
 add_filter( 'tiny_mce_before_init', 'custom_editor_settings' );
 // FancyBox
-function remove_img_attr( $html ) {
-  $class = 'fancyBox';
-  return str_replace( '<a ', '<a class="'. $class. '" ', $html );
+function add_fancyBox_class( $html, $id = '', $caption = '', $title = '', $align = '', $url = '', $size = '', $alt = '' ) {
+    return str_replace( '><img src', ' class="fancyBox"><img src', $html );
 }
-add_filter( 'image_send_to_editor', 'remove_img_attr' );
+add_filter( 'image_send_to_editor', 'add_fancyBox_class' );
 
-// Caption image size
-add_shortcode('caption', 'my_img_caption_shortcode');
-function my_img_caption_shortcode($attr, $content = null) {
-  if ( ! isset( $attr['caption'] ) ) {
-    if ( preg_match( '#((?:<a [^>]+>s*)?<img [^>]+>(?:s*</a>)?)(.*)#is', $content, $matches ) ) {
-      $content = $matches[1];
-      $attr['caption'] = trim( $matches[2] );
-    }
-  }
-  $output = apply_filters('img_caption_shortcode', '', $attr, $content);
-  if ( $output != '' )
-    return $output;
-  extract(shortcode_atts(array(
-    'id'  => '',
-    'align' => 'alignnone',
-    'width' => '',
-    'caption' => ''
-  ), $attr, 'caption'));
-  if ( 1 > (int) $width || empty($caption) )
-    return $content;
-  if ( $id ) $id = 'id="' . esc_attr($id) . '" ';
-  return '<div ' . $id . 'class="wp-caption ' . esc_attr($align) . '">' . do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
-}
 // Sidebar
 if ( ! function_exists( 'child_theme_setup' ) ):
 function child_theme_setup() {
