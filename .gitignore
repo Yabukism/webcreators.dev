@@ -18,4 +18,10 @@ Movefile
 xxx*
 /wp-snapshots/
 remote add origin https://Yabukism:200373Ku@github.com/Yabukism/webcreators.dev.git
-/wp-snapshots/
+sftp-comfig.json
+*.sublime-project
+/wp-content/staging-backup-*
+*.log
+*.sql
+
+
