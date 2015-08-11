@@ -22,24 +22,24 @@ $page_show_filter = penguin_get_post_meta_key('portfolio-show-filter');
 ?>
 <div id="main" class="container aja">
   <div class="row">
-        <section class="<?php echo $layout == 1 ? 'col-md-12 col-sm-12' : 'alterna-col col-lg-9 col-md-8 col-sm-8 alterna-'.$layout_class; ?>">
-    <?php
+    <section class="<?php echo $layout == 1 ? 'col-md-12 col-sm-12' : 'alterna-col col-lg-9 col-md-8 col-sm-8 alterna-'.$layout_class; ?>">
+        <?php
         if (have_posts() ) {
             while ( have_posts() ) { the_post();
-        ?>
-            <div class="post-content">
+                ?>
+                <div class="post-content">
                   <?php the_content(); ?>
                   <?php wp_link_pages(); ?>
-            </div>
-    <?php
-            }
-        }
+              </div>
+              <?php
+          }
+      }
       get_template_part( 'template/portfolio/ajax-content');
-        ?>
-    </section>
-    <?php if($layout != 1) { ?>
-        <aside class="alterna-col col-lg-3 col-md-4 col-sm-4 alterna-<?php echo $layout_class;?>"><?php generated_dynamic_sidebar(); ?></aside>
-        <?php } ?>
-    </div>
+      ?>
+  </section>
+<?php if($layout != 1) { ?>
+<aside class="alterna-col col-lg-3 col-md-4 col-sm-4 alterna-<?php echo $layout_class;?>"><?php generated_dynamic_sidebar(); ?></aside>
+<?php } ?>
+</div>
 </div>
 <?php get_footer(); ?>

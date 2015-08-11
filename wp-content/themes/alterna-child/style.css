@@ -24,6 +24,7 @@ h5,
 h6 {font-family: 'YuGothic', 'Yu Gothic', '游ゴシック', '游ゴシック体', 'Noto Sans Japanese', sans-serif;}
 body {
   font-size: 16px;
+  line-height: 22px;
 }
 
 .mb-1em { margin-bottom: 1em;}
@@ -78,7 +79,7 @@ h3.bg-gray {
   margin-bottom: 0;
 }
 /* Post page content */
-.entry-content h2,
+/*.entry-content h2,
 .entry-content h3,
 .entry-content h4 {
   clear: both;
@@ -105,7 +106,7 @@ h3.bg-gray {
 .entry-content h3.no-border {
   border-bottom: none;
   padding-bottom: 0;
-}
+}*/
 /* Portfolio page */
 .portfolio-style-1 .portfolio-content{
   text-align: left;
@@ -178,6 +179,10 @@ div.entry-content {
 }
 
 /* Sidebar */
+.textwidget {
+  float: left;
+  width: 100%;
+}
 .widget_text ul,
 .toc_widgetul {
   list-style: none outside none;
@@ -397,7 +402,7 @@ div.entry-content {
 
 h3.widget-title {
     text-align: center;
-    border-bottom: 2px solid green;
+    border-bottom: 2px solid #2ecc70;
     line-height: 0;
     padding: 0;
     margin-bottom: 20px;
@@ -408,4 +413,9 @@ h3.widget-title span {
     background: #fff;
     padding: 0 15px;
     text-align: center;
+}
+/* Post Related */
+.single-portfolio .post-related h4.entry-title {
+  font-size: 14px;
+  margin: 0;
 }

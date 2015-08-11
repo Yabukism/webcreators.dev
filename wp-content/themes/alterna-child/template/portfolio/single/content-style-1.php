@@ -69,7 +69,8 @@ $thumbnail_size = 'alterna-nocrop-thumbs';
      <div class="entry-content" itemprop="text">
       <?php the_content(); ?>
 
-      <?php if (is_object_in_term($post->ID, 'historyformat','movie')){
+      <?php if (is_object_in_term($post->ID, 'historyformat',
+        array('movie','drama'))){
         get_template_part( 'template/portfolio/content','movie');
       } ?>
 
@@ -78,14 +79,14 @@ $thumbnail_size = 'alterna-nocrop-thumbs';
     <div class="footnote">
       <?php dynamic_sidebar ('sidebar-5'); ?>
     </div>
-
-
     <?php if(penguin_get_options_key('portfolio-enable-share') == "on") { ?>
     <div class="portfolio-share">
-     <?php echo do_shortcode('[easy-social-share buttons="facebook,twitter,google,pinterest,tumblr" counters=0 native=”no” fullwidth=”yes” native=”no” fullwidth_align=”center”]'); ?>
+      <?php echo do_shortcode('[easy-social-share buttons="facebook,twitter,google,pinterest" counters=0 native="no"  native="no" counters=1 counter_pos="insidename" style="button"]'); ?> 
+   
+
    </div>
    <?php } ?>
-
+   <?php comments_template(); ?>
 
 </div>
 <?php

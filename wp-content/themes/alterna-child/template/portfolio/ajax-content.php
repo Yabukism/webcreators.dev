@@ -29,10 +29,10 @@ if($page_cats != "") {
 
  // get portfolio
 $args = array(	'post_type' => 'portfolio',
-              'post_status' => 'publish',
-              'paged' => $paged,
-              'posts_per_page'=> $page_nums
-              );
+  'post_status' => 'publish',
+  'paged' => $paged,
+  'posts_per_page'=> $page_nums
+  );
 
 // show category,tags portfolio
 if(count($tax_query) > 0) {
@@ -77,6 +77,7 @@ if ( $portfolios->have_posts() ) {
   </div>
 </section>
 <?php } ?>
+
 
 <section class="ajax-isotope row portfolio-ajax-type" <?php echo $page_image_no_crop == "on" ? 'data-layoutmode="masonry"' : ''; ?>>
   <?php

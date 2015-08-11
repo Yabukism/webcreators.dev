@@ -177,6 +177,7 @@
 </ul>
 </div>
 <div class="clear"></div>
+
 <!-- <div id="tax_country" class="widget widget_categories">
   <h3 class="widget-title"><span>国別カテゴリ</span></h3>
   <ul>
