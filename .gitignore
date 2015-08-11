@@ -23,5 +23,6 @@ sftp-comfig.json
 /wp-content/staging-backup-*
 *.log
 *.sql
+*.html
 
 
