@@ -1440,8 +1440,8 @@ google.maps.event.addListener(marker'.$this->marker[$i]['location_id'].$this->di
 
      $this->code.='});';
 }
-$this->code.='allmarkers.push(marker'.$this->marker[$i]['location_id'].$this->divID.');';	  
 }
+$this->code.='allmarkers.push(marker'.$this->marker[$i]['location_id'].$this->divID.');';
 }
 
 
