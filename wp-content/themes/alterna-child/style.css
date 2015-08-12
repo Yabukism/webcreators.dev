@@ -419,3 +419,15 @@ h3.widget-title span {
   font-size: 14px;
   margin: 0;
 }
+/* JetPack */
+.portfolio-share {
+  margin: 30px 0;
+  text-align: center;
+}
+.form-submit button#submit.btn.btn-theme.no-margin {
+  margin-bottom: 10px;
+}
+label.subscribe-label {
+  font-weight: 100;
+  font-size: 14px;
+}

@@ -1,4 +1,29 @@
 <?php
+// Add feed Custom post type 
+function myfeed_request($qv) {
+  if (isset($qv['feed']) && !isset($qv['post_type']))
+    $qv['post_type'] = array('post', 'portfolio');
+  return $qv;
+}
+add_filter('request', 'myfeed_request');
+
+//  Sidever text widget add shortcode
+add_filter('widget_text', 'do_shortcode');
+
+// Jetpack share 移動
+function jptweak_remove_share() {
+    remove_filter( 'the_content', 'sharing_display',19 );
+    remove_filter( 'the_excerpt', 'sharing_display',19 );
+    if ( class_exists( 'Jetpack_Likes' ) ) {
+        remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
+    }
+}
+add_action( 'loop_start', 'jptweak_remove_share' );
+// Jetpack 自動投稿
+add_action('init', 'my_custom_jet');
+function my_custom_jet() {
+    add_post_type_support( 'portfolio', 'publicize' );
+}
 
 // ビジュアルエディタ用CSS
 add_editor_style('editor-style.css');
@@ -104,8 +129,8 @@ function alterna_widgets_init_child(){
     'after_title' => '</span></h3>'
   ));
 }
-// add_action('init', 'my_custom_init');
-// function my_custom_init() {
+// add_action('init', 'my_custom_jet');
+// function my_custom_jet() {
 //     add_post_type_support( 'portfolio', 'publicize' );
 // }
 ?>

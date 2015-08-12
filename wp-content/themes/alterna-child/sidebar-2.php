@@ -5,6 +5,20 @@
  * @since alterna 7.0
  */
 ?>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- history300x250 -->
+<div class="widget">
+  <ins class="adsbygoogle"
+  style="display:inline-block;width:300px;height:250px"
+  data-ad-client="ca-pub-2050911374369150"
+  data-ad-slot="8201371471"></ins>
+</div>  
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+<div class="clear"></div>
 <div class="widget widget_search_filter_register_widget">
   <h3 class="widget-title"><span><?php _e('検索','alterna'); ?></span></h3>
   <?php echo do_shortcode('[searchandfilter id="3038"]' ); ?>
